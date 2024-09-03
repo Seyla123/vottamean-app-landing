@@ -1,93 +1,55 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { homeData } from '../../data/homeData';
+import TitleSection from '../section/TitleSection';
 import {
     Box,
     Typography,
-    Tabs,
-    Tab,
+    Button,
     Card,
     CardContent,
     CardMedia,
-    Button,
-    Container,
-    Grid,
 } from '@mui/material';
-import { Link } from 'react-router-dom';
-import TitleSection from '../section/TitleSection';
 
 const OurFeatureSection = () => {
     const { mainTitle, features } = homeData.ourFeaturesSection;
     const [activeTab, setActiveTab] = useState(0);
 
-    const handleTabChange = (event, newValue) => {
-        setActiveTab(newValue);
-    };
-
     return (
-        <Box
-            component='section'
-            sx={{
-                py: { xs: '20px', md: '40px' },
-                bgcolor: 'background.default',
-            }}
-        >
-            <Container sx={{ width: '100%' }}>
+        <Box component='section' sx={sectionStyles}>
+            <Box sx={{ width: '100%' }}>
                 <TitleSection
                     title={mainTitle.title}
                     description={mainTitle.description}
                 />
 
-                <Grid
-                    container
-                    spacing={4}
-                    direction='column'
-                    sx={{ width: '100%', marginTop: '32px' }}
-                >
-                    <Card>
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                overflowX: 'auto',
-                                borderBottom: 1,
-                                borderColor: 'divider',
-                                padding: '14px',
-                            }}
-                        >
+                <Box sx={featureBoxStyles}>
+                    <Card sx={{ borderRadius: '16px' }}>
+                        <Box sx={tabsContainerStyles}>
                             {features.map((feature, index) => (
                                 <Button
                                     key={index}
-                                    variant={activeTab === index && 'contained'}
-                                    color='primary'
-                                    onClick={event =>
-                                        handleTabChange(event, index)
+                                    variant={
+                                        activeTab === index
+                                            ? 'contained'
+                                            : 'text'
                                     }
-                                    sx={{ mx: 1 }}
+                                    color='primary'
+                                    onClick={() => setActiveTab(index)}
+                                    sx={tabButtonStyles}
                                 >
                                     {feature.title}
                                 </Button>
                             ))}
                         </Box>
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                flexDirection: { xs: 'column', sm: 'row' },
-                                padding: { xs: '14px', sm: '24px' },
-                            }}
-                        >
+                        <Box sx={contentContainerStyles}>
                             <CardMedia
                                 component='img'
-                                height='300'
                                 image={features[activeTab].image}
                                 alt={features[activeTab].title}
+                                sx={cardMediaStyles}
                             />
-                            <CardContent
-                                sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    justifyContent: 'center',
-                                    alignItems: 'start',
-                                }}
-                            >
+                            <CardContent sx={cardContentStyles}>
                                 <Typography
                                     variant='h5'
                                     component='h3'
@@ -113,10 +75,57 @@ const OurFeatureSection = () => {
                             </CardContent>
                         </Box>
                     </Card>
-                </Grid>
-            </Container>
+                </Box>
+            </Box>
         </Box>
     );
+};
+
+// Styles
+const sectionStyles = {
+    width: '100%',
+    py: { xs: '20px', md: '40px' },
+    bgcolor: 'background.default',
+};
+
+const featureBoxStyles = {
+    width: '100%',
+    marginTop: '32px',
+};
+
+const tabsContainerStyles = {
+    display: 'flex',
+    overflowX: 'auto',
+    borderBottom: 1,
+    borderColor: 'divider',
+    padding: '14px',
+    '&::-webkit-scrollbar': { display: 'none' },
+    scrollbarWidth: 'none',
+    msOverflowStyle: 'none',
+};
+
+const tabButtonStyles = {
+    mx: 1,
+    whiteSpace: 'nowrap',
+    flexShrink: 0,
+};
+
+const contentContainerStyles = {
+    display: 'flex',
+    flexDirection: { xs: 'column', sm: 'row' },
+    gap: { xs: '14px', sm: '24px' },
+    padding: { xs: '14px', sm: '24px' },
+};
+
+const cardMediaStyles = {
+    width: { xs: '100%', sm: '50%' },
+};
+
+const cardContentStyles = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'start',
 };
 
 export default OurFeatureSection;
