@@ -1,6 +1,6 @@
 export const contactData = {
-    //  CONTACT SECTION
-    contactSection: {
+    //  CONTACT SECTION HEADER
+    contactSection1: {
         mainTitle: {
             title: 'Get in touch',
             description:
@@ -39,8 +39,8 @@ export const contactData = {
         ],
     },
 
-    //  CONTACT SECTION
-    contactSection: {
+    //  CONTACT SECTION BOTTOM
+    contactSection2: {
         mainTitle: {
             title: 'Contact Us',
             description:
