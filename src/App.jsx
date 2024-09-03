@@ -9,6 +9,7 @@ import FeaturePage from './pages/FeaturePage';
 function App() {
   return (
     <BrowserRouter>
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -16,6 +17,7 @@ function App() {
         <Route path="/pricing" element={<PricingPage />} />
         <Route path='/features' element={<FeaturePage />} />
       </Routes>
+      
     </BrowserRouter>
   )
 }
