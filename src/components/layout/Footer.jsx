@@ -8,10 +8,22 @@ const footerContainer = {
   bgcolor: "#F3F3F5",
   justifyContent: "space-between",
   alignItems: "start",
-  paddingRight: "80px",
-  paddingLeft: "80px",
-  paddingTop: "80px",
-  paddingBottom: "120px",
+  paddingRight: {
+    xs:"14px",
+    sm: "80px",
+  },
+  paddingLeft: {
+    xs:"14px",
+    sm: "80px",
+  },
+  paddingTop:{
+    xs:"14px",
+    sm: "80px",
+  },
+  paddingBottom: {
+    xs:"40px",
+    sm: "120px",
+  },
   borderRadius: "16px",
   flexDirection: {
     xs: "column",
