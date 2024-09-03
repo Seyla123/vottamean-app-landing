@@ -16,7 +16,7 @@ export default function FaqSection() {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: "16px", // No gap between Accordion items
+          gap: "16px",
           borderRadius: "16px",
           marginTop: "10px",
         }}
@@ -30,11 +30,10 @@ export default function FaqSection() {
                 paddingX: "24px",
                 bgcolor: "#eeeeee",
                 borderRadius: "4px",
-                boxShadow: "none", // Remove shadow
-                border: "none", // Remove border completely
-                margin: 0, // Remove margin to ensure no spacing
+                boxShadow: "none",
+                border: "none",
+                margin: 0,
                 "&:before": {
-                  // Remove the default border line
                   display: "none",
                 },
               }}
@@ -42,11 +41,10 @@ export default function FaqSection() {
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 sx={{
-                  border: "none", // Remove border from AccordionSummary
-                  margin: 0, // Remove margin
-                  padding: 0, // Remove padding
+                  border: "none",
+                  margin: 0,
+                  padding: 0,
                   "&.Mui-expanded": {
-                    // No border or line even when expanded
                     borderBottom: "none",
                   },
                 }}
