@@ -10,7 +10,7 @@ const TitleSection = ({ title, description }) => {
         flexDirection: "column",
         alignItems: "center",
         textAlign: "center",
-        maxWidth: "100%",
+        maxWidth: "75%",
         marginBottom: "32px",
       }}
     >
