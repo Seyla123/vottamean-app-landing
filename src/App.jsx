@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import PricingPage from './pages/PricingPage';
 import FeaturePage from './pages/FeaturePage';
 import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                     <Route path='/features' element={<FeaturePage />} />
                 </Routes>
             </Container>
+            <Footer />
         </BrowserRouter>
     );
 }
