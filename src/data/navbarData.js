@@ -1,6 +1,6 @@
 import Logo from '../assets/images/Logo.png';
 
-export const headerData = {
+export const navbarData = {
     logo: Logo,
     menuItems: [
         {
