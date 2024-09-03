@@ -1,0 +1,5 @@
+REVIEWBOARD_URL = "https://review.clp.kr"
+REPOSITORY = "HexCode/Wave-Track/Guest"
+REPOSITORY_TYPE = "git"
+BRANCH = "feature/FaqSection-component"
+LAND_DEST_BRANCH = "feature/FaqSection-component"
