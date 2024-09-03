@@ -47,7 +47,4 @@ export const contactData = {
                 'Contact us with any questions or concerns. We will get back to you as soon as possible.',
         },
     },
-
-    
-
 };
