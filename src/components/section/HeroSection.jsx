@@ -66,7 +66,8 @@ const HeroImage = () => {
 
 const styles = {
     section: {
-        py: '100px',
+        paddingTop: '100px',
+        paddingBottom: '200px',
     },
     contentWrapper: {
         width: '100%',
