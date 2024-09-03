@@ -9,8 +9,6 @@ import { homeData } from "../../data/homeData";
 import TitleSection from "./TitleSection";
 
 export default function FaqSection() {
-  console.log(homeData.faqSection);
-
   return (
     <Box>
       <TitleSection title={homeData.faqSection.mainTitle.title} description={homeData.faqSection.mainTitle.description}/>
