@@ -1,7 +1,7 @@
-import React from "react";
-import { Box, Container, Typography } from "@mui/material";
-import { footerData } from "../../data/footerData";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Box, Container, Typography } from '@mui/material';
+import { footerData } from '../../data/footerData';
+import { Link } from 'react-router-dom';
 
 const footer = {
   marginTop: {
