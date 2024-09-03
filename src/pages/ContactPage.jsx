@@ -1,8 +1,10 @@
 import React from 'react'
-
-const ContactPage = () => {
+import Footer from '../components/layout/Footer'
+function ContactPage() {
   return (
-    <div>ContactPage</div>
+    <div>
+      <Footer />
+    </div>
   )
 }
 
