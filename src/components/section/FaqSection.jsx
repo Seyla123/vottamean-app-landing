@@ -11,14 +11,17 @@ import TitleSection from "./TitleSection";
 export default function FaqSection() {
   return (
     <Box>
-      <TitleSection title={homeData.faqSection.mainTitle.title} description={homeData.faqSection.mainTitle.description}/>
+      <TitleSection
+        title={homeData.faqSection.mainTitle.title}
+        description={homeData.faqSection.mainTitle.description}
+      />
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           gap: "16px",
           borderRadius: "16px",
-          marginTop: "10px",
+          marginTop: 4,
         }}
       >
         {homeData.faqSection.faqs.map((item, index) => {
@@ -27,12 +30,10 @@ export default function FaqSection() {
               key={index}
               disableGutters
               sx={{
-                paddingX: "24px",
+                px: 2,
                 bgcolor: "#eeeeee",
-                borderRadius: "4px",
+                borderRadius: 1,
                 boxShadow: "none",
-                border: "none",
-                margin: 0,
                 "&:before": {
                   display: "none",
                 },
@@ -41,8 +42,6 @@ export default function FaqSection() {
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 sx={{
-                  border: "none",
-                  margin: 0,
                   padding: 0,
                   "&.Mui-expanded": {
                     borderBottom: "none",
@@ -52,7 +51,7 @@ export default function FaqSection() {
                 <Typography variant="h6">{item.question}</Typography>
               </AccordionSummary>
               <AccordionDetails sx={{ paddingX: 0 }}>
-                <Typography sx={{ fontWeight: "24" }}>{item.answer}</Typography>
+                <Typography variant="subtitle1">{item.answer}</Typography>
               </AccordionDetails>
             </Accordion>
           );
