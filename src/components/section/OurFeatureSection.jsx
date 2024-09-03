@@ -29,11 +29,7 @@ const OurFeatureSection = () => {
                             {features.map((feature, index) => (
                                 <Button
                                     key={index}
-                                    variant={
-                                        activeTab === index
-                                            ? 'contained'
-                                            : 'text'
-                                    }
+                                    variant={activeTab === index && 'contained'}
                                     color='primary'
                                     onClick={() => setActiveTab(index)}
                                     sx={tabButtonStyles}
