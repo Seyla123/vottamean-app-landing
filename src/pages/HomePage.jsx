@@ -1,8 +1,11 @@
 import React from 'react'
-
+import FaqSection from '../components/section/FaqSection'
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>HomePage
+
+      <FaqSection/>
+    </div>
   )
 }
 
