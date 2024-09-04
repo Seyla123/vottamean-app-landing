@@ -6,7 +6,7 @@ import ContactSection from "../components/section/ContactSection";
 import FaqSection from "../components/section/FaqSection";
 function ContactPage() {
   return (
-    <div>
+    <Box>
       {/* Input Section */}
       <Container
         maxWidth="lg"
@@ -73,7 +73,7 @@ function ContactPage() {
       <FaqSection />
       {/* Contact Us Section */}
       <ContactSection />
-    </div>
+    </Box>
   );
 }
 
