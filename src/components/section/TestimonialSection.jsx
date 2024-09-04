@@ -1,13 +1,17 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { homeData } from "../../data/homeData";
 import TestimonialCard from "../common/TestimonialCard";
+import TitleSection from "./TitleSection";
 
 const TestimonialSection = () => {
     return (
         <Box>
-            <h2>{homeData.testimonialSection.mainTitle.title}</h2>
-            <p>{homeData.testimonialSection.mainTitle.description}</p>
+            <TitleSection
+                title={homeData.testimonialSection.mainTitle.title}
+                description={homeData.testimonialSection.mainTitle.description}
+            />
+
             <Box display="flex" flexDirection="column" gap={2}>
                 {homeData.testimonialSection.testimonials.map(
                     (testimonial, index) => (
