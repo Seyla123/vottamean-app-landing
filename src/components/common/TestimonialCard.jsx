@@ -28,7 +28,11 @@ const TestimonialCard = ({ logo, description, profile }) => {
                         }}
                     />
                 </Box>
-                <Typography variant="body1" sx={{ my: 4 }}>
+                <Typography
+                    variant="body1"
+                    sx={{ my: 4 }}
+                    color="text.secondary"
+                >
                     {description}
                 </Typography>
                 <Box sx={{ display: "flex", gap: 1 }}>

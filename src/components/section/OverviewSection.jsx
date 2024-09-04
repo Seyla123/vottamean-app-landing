@@ -29,7 +29,7 @@ const OverviewSection = () => {
                                 padding: "16px",
                             }}
                         >
-                            <Box sx={{ width: {xs: "100%", sm: "50%"} }}>
+                            <Box sx={{ width: { xs: "100%", sm: "50%" } }}>
                                 <img
                                     src={ourFeaturesSection.features[0].image}
                                     alt={feature.title}
@@ -45,10 +45,10 @@ const OverviewSection = () => {
                                     p: "16px",
                                 }}
                             >
-                                <Typography variant="h5" sx={{ mb: "10px" }}>
+                                <Typography variant="h4" sx={{ mb: "10px" }}>
                                     {feature.title}
                                 </Typography>
-                                <Typography variant="body2">
+                                <Typography variant="body1">
                                     {feature.contents.description}
                                 </Typography>
                             </Box>
@@ -90,10 +90,13 @@ const OverviewSection = () => {
                                     height: 1,
                                 }}
                             >
-                                <Typography variant="h5" sx={{ mb: "10px" }}>
+                                <Typography variant="h4" sx={{ mb: "10px" }}>
                                     {feature.title}
                                 </Typography>
-                                <Typography variant="body2">
+                                <Typography
+                                    variant="body1"
+                                    color="text.secondary"
+                                >
                                     {feature.contents.description}
                                 </Typography>
                             </Box>

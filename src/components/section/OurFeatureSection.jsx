@@ -55,14 +55,14 @@ const OurFeatureSection = () => {
                             />
                             <Box sx={cardContentStyles}>
                                 <Typography
-                                    variant="h5"
-                                    component="h3"
+                                    variant="h4"
+                                    component="h4"
                                     gutterBottom
                                 >
                                     {features[activeTab].contents.title}
                                 </Typography>
                                 <Typography
-                                    variant="body2"
+                                    variant="body1"
                                     color="text.secondary"
                                 >
                                     {features[activeTab].contents.description}

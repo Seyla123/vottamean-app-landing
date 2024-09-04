@@ -52,10 +52,13 @@ const HighlightSection = () => {
                                         }}
                                     />
                                 </Box>
-                                <Typography variant="h5">
+                                <Typography variant="h4">
                                     {highlight.title}
                                 </Typography>
-                                <Typography variant="body2">
+                                <Typography
+                                    variant="body1"
+                                    color="text.secondary"
+                                >
                                     {highlight.description}
                                 </Typography>
                             </CardContent>
