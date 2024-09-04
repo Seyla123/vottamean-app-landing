@@ -3,9 +3,10 @@ import { contactData } from "../data/contactData";
 import { Box, Container, TextField, Button } from "@mui/material";
 import TitleSection from "../components/section/TitleSection";
 import ContactSection from "../components/section/ContactSection";
+import FaqSection from "../components/section/FaqSection";
 function ContactPage() {
   return (
-    <div>
+    <Box>
       {/* Input Section */}
       <Container
         maxWidth="lg"
@@ -68,10 +69,11 @@ function ContactPage() {
           </Button>
         </Box>
       </Container>
-
+      {/* Faqs Section */}
+      <FaqSection />
       {/* Contact Us Section */}
       <ContactSection />
-    </div>
+    </Box>
   );
 }
 
