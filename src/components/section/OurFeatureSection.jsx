@@ -10,7 +10,7 @@ import {
     CardContent,
     CardMedia,
 } from "@mui/material";
-import { bgcolor, height, maxHeight, minHeight } from "@mui/system";
+import { bgcolor } from "@mui/system";
 
 const OurFeatureSection = () => {
     const { mainTitle, features } = homeData.ourFeaturesSection;
@@ -18,14 +18,18 @@ const OurFeatureSection = () => {
 
     return (
         <Box component="section" sx={sectionStyles}>
-            <Box sx={{ width: "100%", height: "800px" }}>
+            <Box sx={{ width: "100%" }}>
                 <TitleSection
                     title={mainTitle.title}
                     description={mainTitle.description}
                 />
 
                 <Box sx={featureBoxStyles}>
-                    <Card sx={{ borderRadius: "16px" }}>
+                    <Card
+                        sx={{
+                            borderRadius: "16px",
+                        }}
+                    >
                         <Box sx={tabsContainerStyles}>
                             {features.map((feature, index) => (
                                 <Button
@@ -40,13 +44,16 @@ const OurFeatureSection = () => {
                             ))}
                         </Box>
                         <Box sx={contentContainerStyles}>
-                            <CardMedia
-                                component="img"
-                                image={features[activeTab].image}
+                            <img
+                                src={features[activeTab].image}
                                 alt={features[activeTab].title}
-                                sx={cardMediaStyles}
+                                style={{
+                                    width: "100%",
+                                    height: "400px",
+                                    objectFit: "cover",
+                                }}
                             />
-                            <CardContent sx={cardContentStyles}>
+                            <Box sx={cardContentStyles}>
                                 <Typography
                                     variant="h5"
                                     component="h3"
@@ -69,7 +76,7 @@ const OurFeatureSection = () => {
                                         Learn More
                                     </Button>
                                 </Link>
-                            </CardContent>
+                            </Box>
                         </Box>
                     </Card>
                 </Box>
@@ -108,15 +115,11 @@ const tabButtonStyles = {
 
 const contentContainerStyles = {
     display: "flex",
-    width: 1,
-    flexDirection: { xs: "column", sm: "row" },
+    height: "auto",
+    width: "100%",
+    flexDirection: { xs: "column", md: "row" },
     gap: { xs: "14px", sm: "24px" },
     padding: { xs: "14px", sm: "24px" },
-};
-
-const cardMediaStyles = {
-    width: { xs: "100%", sm: "50%", md: "100%" },
-    height: 1,
 };
 
 const cardContentStyles = {
