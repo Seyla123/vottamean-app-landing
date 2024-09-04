@@ -1,8 +1,10 @@
 import React from "react";
-import { aboutData } from "../data/aboutData";
+import { aboutData, ourVision, whyChooseWaveTrack } from "../data/aboutData";
 import { Box, Container, Typography } from "@mui/material";
 import TitleSection from "../components/section/TitleSection";
 import ContactPage from "./ContactPage";
+import { Subtitles } from "@mui/icons-material";
+
 const AboutPage = () => {
   return (
     <div>
@@ -50,6 +52,7 @@ const AboutPage = () => {
           mt: "32px",
         }}
       >
+        {/* 3  */}
         <ul style={{ listStyle: "none", padding: 0 }}>
           {aboutData.contents.map((data, index) => (
             <li key={index} style={{ marginY: "16px" }}>
@@ -65,9 +68,42 @@ const AboutPage = () => {
             </li>
           ))}
         </ul>
+        {/* our vision content */}
+        
+          {ourVision.map((data,index) => (
+            <Box key={index}>
+            <Typography variant="h5" fontWeight={"bold"} key={data.title}>{data.title}</Typography>
+            {data.subTitle && <Typography variant="subtitle1">{data.subTitle}</Typography>}
+            <ul style={{ listStyle: "none", padding: 0 }}>
+              {data.content.map((item, index) => (
+                <li key={index} style={{ marginY: "16px" }}>
+                   <Typography variant="body2" sx={{ mt: "16px", fontSize: "16px" }}>
+                    - {item}
+                  </Typography>
+                </li>
+              ))}
+            </ul>
+            </Box>
+
+          ))}
+        {whyChooseWaveTrack.map((item,index) =>(
+          <Box key={index}>
+          <Typography variant="h5" fontWeight={"bold"} key={item.title}>{item.title}</Typography>
+          <ul style={{ listStyle: "none", padding: 0 }}>
+            {item.content.map((data, index) => (
+              <li key={index} style={{ marginY: "16px" }}>
+              <Typography variant="body2" sx={{ mt: "16px", fontSize: "16px" }}>
+                - {data.header} : {data.text}
+              </Typography>
+            </li>
+            ))}
+          </ul>
+          </Box>
+        ))}
+
       </Box>
     </Container>
-    {/* Contact Us Section */}
+    {/* Contact Us Section calling the Contact Page component */}
     <ContactPage />
     </div>
     
