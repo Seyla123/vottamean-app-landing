@@ -60,15 +60,15 @@ const OurFeatureSection = () => {
                                 >
                                     {features[activeTab].contents.description}
                                 </Typography>
-                                <Button
-                                    variant="contained"
-                                    color="primary"
-                                    sx={{ mt: 2 }}
-                                    component={Link}
-                                    to="/features"
-                                >
-                                    Learn More
-                                </Button>
+                                <Link to="/features">
+                                    <Button
+                                        variant="contained"
+                                        color="primary"
+                                        sx={{ mt: 2 }}
+                                    >
+                                        Learn More
+                                    </Button>
+                                </Link>
                             </CardContent>
                         </Box>
                     </Card>
