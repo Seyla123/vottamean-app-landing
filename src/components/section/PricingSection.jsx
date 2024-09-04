@@ -21,7 +21,6 @@ export default function PricingSection() {
 
   const pricingCardData = homeData.pricingSection.plans;
 
-  // Helper function to conditionally apply styles
   const getCardStyles = (index) => {
     return {
       ...(index === 1 && {
