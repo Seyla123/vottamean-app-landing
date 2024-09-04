@@ -54,8 +54,8 @@ const OverviewSection = () => {
                 sx={{
                     display: "flex",
                     flexDirection: { xs: "column", sm: "row" },
-                    mt: "20px",
-                    gap: "20px",
+                    mt: 2,
+                    gap: 2,
                 }}
             >
                 {ourFeaturesSection.features
