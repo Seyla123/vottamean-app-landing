@@ -48,7 +48,10 @@ const OverviewSection = () => {
                                 <Typography variant="h4" sx={{ mb: "10px" }}>
                                     {feature.title}
                                 </Typography>
-                                <Typography variant="body1">
+                                <Typography
+                                    variant="body1"
+                                    color="text.secondary"
+                                >
                                     {feature.contents.description}
                                 </Typography>
                             </Box>

@@ -30,6 +30,7 @@ const TitleSection = ({ title, description }) => {
             </Typography>
             <Typography
                 variant="body1"
+                color="text.secondary"
                 sx={{
                     mt: "18px",
                     fontSize: {
