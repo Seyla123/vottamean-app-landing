@@ -21,7 +21,18 @@ const PricingSection = () => {
             <Grid container spacing={2}>
                 {pricingData.pricingSection.plans.map((plan, index) => (
                     <Grid item xs={12} md={4} key={index}>
-                        <Card sx={{ height: 1 }}>
+                        <Card
+                            sx={{
+                                height: 1,
+                                boxShadow: 1,
+                                borderRadius: "8px",
+                                padding: { xs: "8px", sm: "16px" },
+                                ...(index === 1 && {
+                                    backgroundColor: "#202842",
+                                    color: "white",
+                                }),
+                            }}
+                        >
                             <CardContent>
                                 <Box
                                     sx={{
@@ -32,15 +43,21 @@ const PricingSection = () => {
                                             xs: "center",
                                             sm: "start",
                                         },
+                                        height: "180px",
                                         gap: 2,
                                     }}
                                 >
-                                    <Typography variant="h4">
-                                        {plan.title}
-                                    </Typography>
-                                    <Typography variant="body1">
-                                        {plan.description}
-                                    </Typography>
+                                    <Box>
+                                        <Typography variant="h4">
+                                            {plan.title}
+                                        </Typography>
+                                        <Typography
+                                            variant="body1"
+                                            sx={{ mt: 2 }}
+                                        >
+                                            {plan.description}
+                                        </Typography>
+                                    </Box>
                                     <Typography variant="h3">
                                         {plan.price}
                                     </Typography>
@@ -73,9 +90,13 @@ const PricingSection = () => {
                             </CardContent>
                             <CardActions>
                                 <Button
-                                    variant="outlined"
+                                    variant={
+                                        index === 1 ? "contained" : "outlined"
+                                    }
                                     size="large"
-                                    sx={{ width: 1 }}
+                                    sx={{
+                                        width: 1,
+                                    }}
                                 >
                                     Subscribe Now
                                 </Button>
