@@ -10,9 +10,10 @@ const TitleSection = ({ title, description }) => {
                 flexDirection: "column",
                 alignItems: "center",
                 textAlign: "center",
-                maxWidth: "600px",
+                maxWidth: "800px",
                 margin: "auto",
-                py: { xs: "32px", sm: "64px" },
+                pt: "128px",
+                pb: "64px",
             }}
         >
             <Typography
@@ -20,8 +21,8 @@ const TitleSection = ({ title, description }) => {
                 sx={{
                     fontWeight: "bold",
                     fontSize: {
-                        xs: "32px",
-                        sm: "48px",
+                        xs: "48px",
+                        sm: "64px",
                     },
                 }}
             >
