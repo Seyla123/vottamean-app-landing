@@ -13,7 +13,7 @@ function App() {
     return (
         <BrowserRouter>
             <Navbar />
-            <Container maxWidth='md' sx={{ width: '100vw' }}>
+            <Container maxWidth='md'>
                 <Routes>
                     <Route path='/' element={<HomePage />} />
                     <Route path='/about' element={<AboutPage />} />
