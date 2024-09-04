@@ -1,12 +1,17 @@
-import React from 'react'
-import FaqSection from '../components/section/FaqSection'
+import React from "react";
+import HeroSection from "../components/section/HeroSection";
+import TrustedSection from "../components/section/TrustedSection";
+import OurFeatureSection from "../components/section/OurFeatureSection";
+import { Box } from "@mui/material";
+
 const HomePage = () => {
-  return (
-    <div>HomePage
+    return (
+        <Box>
+            <HeroSection />
+            <TrustedSection />
+            <OurFeatureSection />
+        </Box>
+    );
+};
 
-      <FaqSection/>
-    </div>
-  )
-}
-
-export default HomePage
+export default HomePage;
