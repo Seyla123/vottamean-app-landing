@@ -139,6 +139,10 @@ const Navbar = () => {
                     <Box sx={{ display: "flex", gap: 2 }}>
                         <Button
                             variant="outlined"
+                            sx={{
+                                color: "black",
+                                border: "1px solid black",
+                            }}
                             component={Link}
                             to="/signin"
                         >

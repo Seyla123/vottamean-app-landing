@@ -93,6 +93,7 @@ const PricingSection = () => {
                                     variant={
                                         index === 1 ? "contained" : "outlined"
                                     }
+                                    color={index === 1 ? "primary" : "inherit"}
                                     size="large"
                                     sx={{
                                         width: 1,
