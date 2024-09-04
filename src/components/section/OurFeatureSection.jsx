@@ -18,7 +18,7 @@ const OurFeatureSection = () => {
 
     return (
         <Box component="section" sx={sectionStyles}>
-            <Box sx={{ width: "100%" }}>
+            <Box sx={{ width: "100%", height: "800px" }}>
                 <TitleSection
                     title={mainTitle.title}
                     description={mainTitle.description}
