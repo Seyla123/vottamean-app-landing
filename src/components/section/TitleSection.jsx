@@ -12,7 +12,7 @@ const TitleSection = ({ title, description }) => {
                 textAlign: "center",
                 maxWidth: "600px",
                 margin: "auto",
-                py: "32px",
+                py: { xs: "32px", sm: "64px" },
             }}
         >
             <Typography

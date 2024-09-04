@@ -1,20 +1,47 @@
 import React from "react";
-import { Card, CardContent, Typography, Avatar } from "@mui/material";
+import { Card, Box, CardContent, Typography, Avatar } from "@mui/material";
 
-const TestimonialCard = ({ logo, title, description, profile }) => {
+const TestimonialCard = ({ logo, description, profile }) => {
     return (
-        <Card>
+        <Card
+            sx={{
+                padding: { xs: "4px", sm: "8px" },
+                borderRadius: "16px",
+                height: 1,
+            }}
+        >
             <CardContent>
-                <img
-                    src={logo}
-                    alt={`${title} logo`}
-                    style={{ width: 50, height: 50 }}
-                />
-                <Typography variant="h6">{title}</Typography>
-                <Typography variant="body2">{description}</Typography>
-                <Avatar src={profile.image} alt={profile.name} />
-                <Typography variant="subtitle2">{profile.name}</Typography>
-                <Typography variant="caption">{profile.role}</Typography>
+                <Box
+                    sx={{
+                        width: "100px",
+                        height: "40px",
+                    }}
+                >
+                    <img
+                        src={logo}
+                        alt={` logo`}
+                        style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "contain",
+                            objectPosition: "center",
+                        }}
+                    />
+                </Box>
+                <Typography variant="body1" sx={{ my: 4 }}>
+                    {description}
+                </Typography>
+                <Box sx={{ display: "flex", gap: 1 }}>
+                    <Avatar src={profile.image} alt={profile.name} />
+                    <Box>
+                        <Typography variant="subtitle2" fontWeight={600}>
+                            {profile.name}
+                        </Typography>
+                        <Typography variant="caption">
+                            {profile.role}
+                        </Typography>
+                    </Box>
+                </Box>
             </CardContent>
         </Card>
     );

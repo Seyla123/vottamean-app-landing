@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import { homeData } from "../../data/homeData";
 import TestimonialCard from "../common/TestimonialCard";
 import TitleSection from "./TitleSection";
@@ -12,19 +12,19 @@ const TestimonialSection = () => {
                 description={homeData.testimonialSection.mainTitle.description}
             />
 
-            <Box display="flex" flexDirection="column" gap={2}>
+            <Grid container spacing={2}>
                 {homeData.testimonialSection.testimonials.map(
                     (testimonial, index) => (
-                        <TestimonialCard
-                            key={index}
-                            logo={testimonial.logo}
-                            title={testimonial.title}
-                            description={testimonial.description}
-                            profile={testimonial.profile}
-                        />
+                        <Grid item key={index} xs={12} md={6}>
+                            <TestimonialCard
+                                logo={testimonial.logo}
+                                description={testimonial.description}
+                                profile={testimonial.profile}
+                            />
+                        </Grid>
                     )
                 )}
-            </Box>
+            </Grid>
         </Box>
     );
 };

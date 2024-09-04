@@ -99,7 +99,10 @@ const Navbar = () => {
     );
 
     return (
-        <AppBar position="static" sx={{ backgroundColor: "#fff" }}>
+        <AppBar
+            position="static"
+            sx={{ backgroundColor: "#fff", boxShadow: 1 }}
+        >
             <Toolbar>
                 <Box display="flex" alignItems="center" flexGrow={1}>
                     <Link to="/" style={{ textDecoration: "none" }}>
