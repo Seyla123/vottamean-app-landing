@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import OverviewSection from "../components/section/OverviewSection";
 
 const FeaturePage = () => {
-  return (
-    <div>FeaturePage</div>
-  )
-}
+    return (
+        <div>
+            <OverviewSection />
+        </div>
+    );
+};
 
-export default FeaturePage
+export default FeaturePage;
