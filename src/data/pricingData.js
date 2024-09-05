@@ -11,7 +11,7 @@ export const pricingData = {
             {
                 title: 'Free',
                 description: 'For individuals who are just getting started.',
-                price: 'Free',
+                price: '$0',
                 features: ['1 users', '10GB storage', 'Basic analytics'],
             },
 
@@ -19,14 +19,14 @@ export const pricingData = {
                 title: 'Pro',
                 description:
                     'For individuals who want to maximize their productivity.',
-                price: '29',
+                price: '$29',
                 features: ['10 users', '100GB storage', 'Advanced analytics'],
             },
 
             {
                 title: 'Enterprise',
                 description: 'For large-scale organizations and businesses.',
-                price: '49',
+                price: '$49',
                 features: [
                     'Unlimited users',
                     'Unlimited storage',

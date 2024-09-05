@@ -99,7 +99,10 @@ const Navbar = () => {
     );
 
     return (
-        <AppBar position="static" sx={{ backgroundColor: "#fff" }}>
+        <AppBar
+            position="static"
+            sx={{ backgroundColor: "#fff", boxShadow: 1 }}
+        >
             <Toolbar>
                 <Box display="flex" alignItems="center" flexGrow={1}>
                     <Link to="/" style={{ textDecoration: "none" }}>
@@ -136,6 +139,10 @@ const Navbar = () => {
                     <Box sx={{ display: "flex", gap: 2 }}>
                         <Button
                             variant="outlined"
+                            sx={{
+                                color: "black",
+                                border: "1px solid black",
+                            }}
                             component={Link}
                             to="/signin"
                         >
