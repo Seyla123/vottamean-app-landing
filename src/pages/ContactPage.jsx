@@ -1,13 +1,16 @@
-import React from 'react'
-import Footer from '../components/layout/Footer';
-
+import React from "react";
+import { Box } from "@mui/material";
+import ContactSection from "../components/section/ContactSection";
+import FaqSection from "../components/section/FaqSection";
+import LongContactSection from "../components/section/LongContactSection";
 function ContactPage() {
-
-  return (
-    <div>
-      <Footer />
-    </div>
-  )
+    return (
+        <Box>
+            <LongContactSection />
+            <FaqSection />
+            <ContactSection />
+        </Box>
+    );
 }
 
-export default ContactPage
+export default ContactPage;

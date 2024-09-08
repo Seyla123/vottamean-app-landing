@@ -1,35 +1,35 @@
-import Logo from '../assets/images/Logo.png';
+import Logo from "../assets/images/Logo.png";
 
 export const navbarData = {
     logo: Logo,
     menuItems: [
         {
-            title: 'Home',
-            link: '/',
+            title: "Home",
+            link: "/",
         },
         {
-            title: 'About',
-            link: '/about',
+            title: "Features",
+            link: "/features",
         },
         {
-            title: 'Features',
-            link: '/features',
+            title: "Pricing",
+            link: "/pricing",
         },
         {
-            title: 'Pricing',
-            link: '/pricing',
+            title: "Contact",
+            link: "/contact",
         },
         {
-            title: 'Contact',
-            link: '/contact',
+            title: "About",
+            link: "/about",
         },
         {
-            title: 'Sign In',
-            link: '/signin',
+            title: "Sign In",
+            link: "/signin",
         },
         {
-            title: 'Get Started',
-            link: '/signup',
+            title: "Get Started",
+            link: "/signup",
         },
     ],
 };

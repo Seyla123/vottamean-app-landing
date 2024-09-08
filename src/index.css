@@ -1,5 +1,11 @@
+/* Add this to your main CSS file */
+
 * {
-    margin : 0px;
-    padding : 0px;
-    box-sizing : border-box;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9fafb;
 }
