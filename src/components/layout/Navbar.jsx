@@ -78,7 +78,7 @@ const Navbar = () => {
             sx={{ width: '100%' }}
             variant="outlined"
             component={Link}
-            to="auth/signin"
+            to="https://www.web.vottamean.com/auth/signin"
             fullWidth
           >
             Sign In
@@ -88,7 +88,7 @@ const Navbar = () => {
             color="primary"
             variant="contained"
             component={Link}
-            to="auth/signup"
+            to="https://www.web.vottamean.com/auth/signup"
             fullWidth
           >
             Get Started
@@ -141,7 +141,7 @@ const Navbar = () => {
                 border: '1px solid black',
               }}
               component={Link}
-              to="auth/signin"
+              to="https://www.web.vottamean.com/auth/signin"
             >
               Sign In
             </Button>
@@ -149,7 +149,7 @@ const Navbar = () => {
               color="primary"
               variant="contained"
               component={Link}
-              to="auth/signup"
+              to="https://www.web.vottamean.com/auth/signup"
             >
               Get Started
             </Button>
