@@ -78,7 +78,7 @@ const Navbar = () => {
             sx={{ width: '100%' }}
             variant="outlined"
             component={Link}
-            to="/signin"
+            to="auth/signin"
             fullWidth
           >
             Sign In
@@ -88,7 +88,7 @@ const Navbar = () => {
             color="primary"
             variant="contained"
             component={Link}
-            to="/signup"
+            to="auth/signup"
             fullWidth
           >
             Get Started
