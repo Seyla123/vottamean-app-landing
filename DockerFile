@@ -23,5 +23,5 @@ FROM nginx:alpine
 COPY --from=build /usr/src/app/dist /usr/share/nginx/html
 
 # Expose the port that your application will run on
-EXPOSE 5173
+EXPOSE 5174
 
