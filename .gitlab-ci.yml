@@ -9,7 +9,7 @@ build-landing:
   image: docker:latest
   services:
     - name: docker:dind
-      command: ["--insecure-registry=git.clp.kr:5050"]
+      command: ['--insecure-registry=git.clp.kr:5050']
   variables:
     DOCKER_DRIVER: overlay2
   script:
@@ -44,17 +44,13 @@ deploy-landing:
     - ssh-keyscan -H ec2-44-206-226-251.compute-1.amazonaws.com >> ~/.ssh/known_hosts
     - eval $(ssh-agent -s)
 
-    # Deploy the application on the EC2 instance using rsync
-    - echo "Deploying landing using rsync..."
-    - rsync -avz --delete --exclude='.git' --exclude='node_modules' --progress ./ ubuntu@ec2-44-206-226-251.compute-1.amazonaws.com:/home/ubuntu/wavetrack-guest/
-
     # SSH into EC2, log in to the Docker registry, and restart the application
     - echo "Logging in to Docker registry and restarting application on EC2..."
     - ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ubuntu@ec2-44-206-226-251.compute-1.amazonaws.com "
       echo '$CI_REGISTRY_PASSWORD' | sudo docker login -u '$CI_REGISTRY_USER' --password-stdin $CI_REGISTRY &&
-      cd /home/ubuntu/wavetrack-guest &&
+      cd /home/ubuntu/landing &&
       sudo docker pull $CI_REGISTRY_IMAGE/landing:latest &&
-      sudo docker-compose -f /home/ubuntu/wavetrack-guest/docker-compose.yml up -d --build
+      sudo docker-compose -f /home/ubuntu/landing/docker-compose.yml up -d --build
       "
 
   environment:
