@@ -18,7 +18,7 @@ const HeroSection = () => {
             <img
               src={underline}
               alt='underline'
-              className='absolute -bottom-6'
+              className='absolute md:-bottom-6 -bottom-4'
             />
             owning
           </div>{' '}
