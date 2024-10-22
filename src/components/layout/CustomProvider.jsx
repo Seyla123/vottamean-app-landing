@@ -6,7 +6,7 @@ const CustomProvider = ({ children }) => {
   return (
     <BrowserRouter>
       <Navbar />
-      <main className='w-full max-w-7xl mx-auto px-4'>{children}</main>
+      <main className='w-full max-w-7xl mx-auto px-4 py-16'>{children}</main>
     </BrowserRouter>
   );
 };

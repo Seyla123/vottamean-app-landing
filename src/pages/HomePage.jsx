@@ -1,8 +1,13 @@
 import { Button } from '@/components/ui/button';
 import React from 'react';
+import HeroSection from '@/components/section/HeroSection';
 
 const HomePage = () => {
-  return <div></div>;
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 };
 
 export default HomePage;
