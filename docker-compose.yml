@@ -25,7 +25,7 @@ services:
     ports:
       - '5174:80'
     volumes:
-      - ./landing-project
+      - ./landing-project:/usr/share/nginx/html
     networks:
       - shared-network
 
