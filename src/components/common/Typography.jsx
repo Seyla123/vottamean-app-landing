@@ -8,7 +8,7 @@ const typographyVariants = cva('', {
       h1: 'font-sans scroll-m-20 text-4xl font-semibold tracking-tight lg:text-6xl',
       h2: 'font-sans mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0',
       h3: 'font-sans mt-8 scroll-m-20 text-2xl font-semibold tracking-tight',
-      h4: 'font-sans scroll-m-20 text-xl font-semibold tracking-tight',
+      h4: 'font-sans scroll-m-20 text-xl font-medium tracking-tight',
       p: 'font-serif text-muted-foreground leading-7 ', //[&:not(:first-child)]:mt-6
       blockquote: 'font-serif mt-6 border-l-2 pl-6 italic',
       list: 'font-serif my-6 ml-6 list-disc [&>li]:mt-2',
