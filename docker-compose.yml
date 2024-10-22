@@ -28,6 +28,7 @@ services:
       - ./landing-project:/usr/share/nginx/html
     networks:
       - shared-network
+    command: [ "/bin/sh", "-c", "cp -r /usr/share/nginx/html/* /usr/share/nginx/html && nginx -g 'daemon off;'" ]
 
   # Frontend Service
   frontend:
