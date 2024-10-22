@@ -50,7 +50,8 @@ deploy-landing:
       echo '$CI_REGISTRY_PASSWORD' | sudo docker login -u '$CI_REGISTRY_USER' --password-stdin $CI_REGISTRY &&
       cd /home/ubuntu/landing &&
       sudo docker pull $CI_REGISTRY_IMAGE/landing:latest &&
-      sudo docker-compose -f /home/ubuntu/landing/docker-compose.yml up -d --build
+      sudo docker-compose -f /home/ubuntu/landing/docker-compose.yml up -d --build &&
+      sudo docker cp landing:/usr/share/nginx/html /home/ubuntu/landing-project
       "
 
   environment:
