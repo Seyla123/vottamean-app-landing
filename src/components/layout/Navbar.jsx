@@ -71,7 +71,7 @@ const NavbarDropDown = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className='w-full inset-0  flex flex-col space-y-2 fixed bg-background top-14 border-b  py-10 px-4'
+      className='w-full inset-0 z-[99] flex flex-col space-y-2 fixed bg-background top-14 border-b  py-10 px-4'
     >
       {navLinks.map((link, index) => (
         <li key={index}>
