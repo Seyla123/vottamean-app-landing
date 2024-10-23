@@ -3,9 +3,9 @@ import HeroSection from "@/components/section/HeroSection";
 import CompanySection from "@/components/section/CompanySection";
 import HowDoesItWorkSection from "@/components/section/HowDoesItWorkSection";
 import BenefitSection from "@/components/section/BenefitSection";
-import FeatureSection from "@/components/section/FeatureSection";
 import StackingCard from "@/components/common/StackingCard";
 import SavingSection from "@/components/section/SavingSection";
+import TestiminialSection from "@/components/section/TestiminialSection";
 
 const HomePage = () => {
   return (
@@ -16,7 +16,7 @@ const HomePage = () => {
       <BenefitSection />
       <SavingSection />
       <StackingCard />
-      <FeatureSection />
+      <TestiminialSection />
     </div>
   );
 };

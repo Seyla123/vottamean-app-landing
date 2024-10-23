@@ -164,3 +164,49 @@ export const savings = [
       "Get the same premium features at a lower cost, offering powerful attendance management tools while saving your budget.",
   },
 ];
+
+export const reviews = [
+  {
+    name: "Samantha Lee",
+    role: "High School Principal",
+    body: "This attendance software has revolutionized the way we track student attendance. It's easy to use and has saved us countless hours. I can't imagine going back to manual processes.",
+    img: "https://images.unsplash.com/photo-1579038773867-044c48829161?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Michael Johnson",
+    role: "Math Teacher",
+    body: "With real-time reporting and automated tracking, I spend less time on paperwork and more time engaging with my students. It's a game-changer for our school.",
+    img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Emma Rodriguez",
+    role: "School Administrator",
+    body: "The accuracy of the system is phenomenal. We no longer have to worry about errors in attendance records, and the real-time data helps us stay on top of everything.",
+    img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+
+  {
+    name: "Jessica Brown",
+    role: "English Teacher",
+    body: "The time saved is incredible. What used to take hours now takes minutes, and the automated system makes it so much easier to manage attendance efficiently.",
+    img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Lucas Nguyen",
+    role: "IT Coordinator",
+    body: "Implementing this system was seamless. The interface is intuitive, and the support from the team has been outstanding. We couldn't be happier with the switch.",
+    img: "https://plus.unsplash.com/premium_photo-1681248156422-c01a2c803588?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Olivia Davis",
+    role: "Primary School Teacher",
+    body: "The real-time reporting feature is fantastic! I can track my class attendance instantly, which allows me to address any attendance issues right away.",
+    img: "https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "John Miller",
+    role: "Education Consultant",
+    body: "Compared to other systems, this is by far the most cost-effective solution we've used. It delivers top-notch performance without breaking the bank.",
+    img: "https://images.unsplash.com/photo-1531256456869-ce942a665e80?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
