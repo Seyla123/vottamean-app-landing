@@ -1,7 +1,8 @@
 import React from "react";
 import SectionHeader from "../common/SectionHeader";
 import ImageTabs from "../common/ImageTabs";
-import { benefits } from "@/lib/data";
+import { benefits, benefitCards } from "@/lib/data";
+import CustomCard from "../common/CustomCard";
 
 const BenefitSection = () => {
   return (
@@ -12,6 +13,11 @@ const BenefitSection = () => {
         underline={"Elevate"}
       />
       <ImageTabs tabs={benefits} className={"flex-row-reverse"} />
+      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {benefitCards.map((benefit, index) => (
+          <CustomCard key={index} data={benefit} />
+        ))}
+      </div>
     </section>
   );
 };

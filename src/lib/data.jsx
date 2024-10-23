@@ -88,19 +88,19 @@ export const benefits = [
 
 export const benefitCards = [
   {
-    icon: <Rocket size={24} />,
+    icon: <Rocket size={28} />,
     title: "Boost Accuracy",
     description:
       "Automate attendance tracking to eliminate manual errors and ensure precise data.",
   },
   {
-    icon: <Hourglass size={24} />,
+    icon: <Hourglass size={28} />,
     title: "Save Time",
     description:
       "Streamline attendance processes, freeing up valuable time for teaching and student support.",
   },
   {
-    icon: <NotepadText size={24} />,
+    icon: <NotepadText size={28} />,
     title: "Instant Reporting",
     description:
       "Generate real-time attendance reports with just one click, giving you actionable insights.",
@@ -114,25 +114,25 @@ import report from "@/assets/images/features/report.svg";
 
 export const features = [
   {
-    icon: realTime,
+    image: realTime,
     title: "Real-Time Attendance Marking",
     description:
       "Easily track students' attendance and automate attendance recording for accuracy",
   },
   {
-    icon: report,
+    image: report,
     title: "Comprehensive Reports",
     description:
       "Generate detailed attendance reports to analyze student engagement and performance.",
   },
   {
-    icon: integration,
+    image: integration,
     title: "Seamless Integration",
     description:
       "Easily track students' attendance and automate attendance recording for accuracy",
   },
   {
-    icon: userInterface,
+    image: userInterface,
     title: "User-Friendly Interface",
     description:
       "Teachers and staff can quickly access and update attendance records with minimal effort.",
