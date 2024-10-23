@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionHeader from '../common/SectionHeader';
+import ImageTabs from '../common/ImageTabs';
 
 const HowDoesItWorkSection = () => {
   return (
@@ -8,6 +9,8 @@ const HowDoesItWorkSection = () => {
         subtitle={'How does it work?'}
         title={'Invest in income-generating real estate, easily.'}
       />
+
+      <ImageTabs />
     </section>
   );
 };

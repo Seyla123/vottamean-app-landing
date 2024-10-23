@@ -5,8 +5,7 @@ import { cn } from '@/lib/utils';
 import { useMediaQuery } from '@/hooks/use-media-query';
 import { Typography } from '../common/Typography';
 
-const TabsContext = createContext;
-
+const TabsContext = createContext(null);
 const useTabs = () => {
   const context = useContext(TabsContext);
   if (!context) {
@@ -76,7 +75,7 @@ export function TabDes({ children, value }) {
             delay: 0.14,
           }}
         >
-          <Typography variant='h4'>{children}</Typography>
+          <Typography variant={'p'}>{children}</Typography>
         </motion.div>
       )}
     </AnimatePresence>
