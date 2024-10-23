@@ -33,7 +33,7 @@ const SectionHeader = ({ subtitle, title, underline }) => {
   };
 
   return (
-    <header className="text-center w-full max-w-2xl mx-auto pb-16">
+    <header className="text-center w-full max-w-2xl mx-auto pb-16 px-14">
       <Badge>{subtitle}</Badge>
       <Typography variant={"h2"}>{renderTitle(title, underline)}</Typography>
     </header>

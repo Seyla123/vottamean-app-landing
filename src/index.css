@@ -1,16 +1,16 @@
 /* Inter font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 /* Nokora font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nokora:wght@100;300;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nokora:wght@100;300;400;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 98%;
     --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
+    --card: 229, 100%, 94%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
@@ -24,7 +24,7 @@
     --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
+    --border: 240 5.9% 80%;
     --input: 240 5.9% 90%;
     --ring: 240 10% 3.9%;
     --chart-1: 12 76% 61%;
@@ -71,5 +71,5 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }

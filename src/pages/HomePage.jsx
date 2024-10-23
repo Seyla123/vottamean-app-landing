@@ -5,6 +5,7 @@ import HowDoesItWorkSection from "@/components/section/HowDoesItWorkSection";
 import BenefitSection from "@/components/section/BenefitSection";
 import FeatureSection from "@/components/section/FeatureSection";
 import StackingCard from "@/components/common/StackingCard";
+import SavingSection from "@/components/section/SavingSection";
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <CompanySection />
       <HowDoesItWorkSection />
       <BenefitSection />
+      <SavingSection />
       <StackingCard />
       <FeatureSection />
     </div>

@@ -8,7 +8,7 @@ import {
 
 const CustomCard = ({ data }) => {
   return (
-    <Card className="bg-primary/10">
+    <Card>
       <CardHeader>
         <CardTitle>
           <div className="mb-8 ">

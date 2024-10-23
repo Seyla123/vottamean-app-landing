@@ -119,7 +119,7 @@ export const features = [
     title: "Time-Saving Automation",
     description:
       "Streamline your attendance process and save hours each week. By automating attendance marking and reporting, educators can focus more on teaching and less on administrative tasks, leading to a more productive classroom environment.",
-    color: "bg-[#D2DAFF]",
+    color: "bg-card",
   },
   {
     link: report,
@@ -127,7 +127,7 @@ export const features = [
     title: "Comprehensive Insights and Reporting",
     description:
       "Access detailed reports and analytics at your fingertips. Our platform provides valuable insights into attendance trends, helping educators identify students who may need additional support and ensuring timely interventions to enhance student engagement.",
-    color: "bg-[#D2DAFF]",
+    color: "bg-card",
   },
   {
     link: integration,
@@ -135,7 +135,7 @@ export const features = [
     title: "Seamless Integration with Existing Systems",
     description:
       "Easily integrate our attendance management solution with your current school systems and software. Our platform works well with popular tools and platforms, ensuring a smooth transition and minimal disruption to your existing processes.",
-    color: "bg-[#D2DAFF]",
+    color: "bg-card",
   },
   {
     link: userInterface,
@@ -143,6 +143,24 @@ export const features = [
     title: "Enhanced Accuracy and Reliability",
     description:
       "Eliminate manual errors with our automated attendance tracking system. Our platform ensures that attendance data is recorded accurately in real-time, reducing discrepancies and providing reliable records for teachers and administrators.",
-    color: "bg-[#D2DAFF]",
+    color: "bg-card",
+  },
+];
+
+export const savings = [
+  {
+    title: "99.9% Accuracy Rate",
+    description:
+      "Say goodbye to manual errors and the inefficiencies of paper-based tracking.",
+  },
+  {
+    title: "50% Time Saved",
+    description:
+      "Cut administrative tasks in half by automating attendance, freeing up time for educators to focus on improving student outcomes.",
+  },
+  {
+    title: "30% Cheaper",
+    description:
+      "Get the same premium features at a lower cost, offering powerful attendance management tools while saving your budget.",
   },
 ];
