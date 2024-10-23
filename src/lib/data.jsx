@@ -1,4 +1,12 @@
-import { UserRound, ListChecks, FileSearch2, ChartPie } from "lucide-react";
+import {
+  UserRound,
+  ListChecks,
+  FileSearch2,
+  ChartPie,
+  Rocket,
+  Hourglass,
+  NotepadText,
+} from "lucide-react";
 
 export const howDoesItWork = [
   {
@@ -75,6 +83,27 @@ export const benefits = [
       "The platform generates detailed attendance reports that can be downloaded in various formats (PDF, Excel). These reports provide insights into class attendance patterns and student participation, helping schools make data-driven decisions.",
     imageUrl:
       "https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format",
+  },
+];
+
+export const benefitCards = [
+  {
+    icon: <Rocket size={24} />,
+    title: "Boost Accuracy",
+    description:
+      "Automate attendance tracking to eliminate manual errors and ensure precise data.",
+  },
+  {
+    icon: <Hourglass size={24} />,
+    title: "Save Time",
+    description:
+      "Streamline attendance processes, freeing up valuable time for teaching and student support.",
+  },
+  {
+    icon: <NotepadText size={24} />,
+    title: "Instant Reporting",
+    description:
+      "Generate real-time attendance reports with just one click, giving you actionable insights.",
   },
 ];
 

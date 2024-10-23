@@ -5,13 +5,14 @@ import { benefits } from "@/lib/data";
 
 const BenefitSection = () => {
   return (
-    <div>
+    <section>
       <SectionHeader
-        title={"Benefits of Using Our Platform"}
+        title={"Elevate Your Attendance Management"}
         subtitle={"Benefits"}
+        underline={"Elevate"}
       />
       <ImageTabs tabs={benefits} className={"flex-row-reverse"} />
-    </div>
+    </section>
   );
 };
 

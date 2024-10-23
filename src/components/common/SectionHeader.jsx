@@ -21,7 +21,7 @@ const SectionHeader = ({ subtitle, title, underline }) => {
                 <img
                   src={underline1}
                   alt=""
-                  className="w-full absolute bottom-[-8px] left-0 right-0"
+                  className="w-full absolute bottom-[-6px] left-0 right-0"
                 />
               </span>
             );
