@@ -4,6 +4,7 @@ import CompanySection from "@/components/section/CompanySection";
 import HowDoesItWorkSection from "@/components/section/HowDoesItWorkSection";
 import BenefitSection from "@/components/section/BenefitSection";
 import FeatureSection from "@/components/section/FeatureSection";
+import StackingCard from "@/components/common/StackingCard";
 
 const HomePage = () => {
   return (
@@ -12,8 +13,8 @@ const HomePage = () => {
       <CompanySection />
       <HowDoesItWorkSection />
       <BenefitSection />
+      <StackingCard />
       <FeatureSection />
-      
     </div>
   );
 };

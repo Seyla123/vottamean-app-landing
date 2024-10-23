@@ -114,27 +114,35 @@ import report from "@/assets/images/features/report.svg";
 
 export const features = [
   {
-    image: realTime,
-    title: "Real-Time Attendance Marking",
+    link: realTime,
+    src: "real time",
+    title: "Time-Saving Automation",
     description:
-      "Easily track students' attendance and automate attendance recording for accuracy",
+      "Streamline your attendance process and save hours each week. By automating attendance marking and reporting, educators can focus more on teaching and less on administrative tasks, leading to a more productive classroom environment.",
+    color: "bg-[#D2DAFF]",
   },
   {
-    image: report,
-    title: "Comprehensive Reports",
+    link: report,
+    src: "report",
+    title: "Comprehensive Insights and Reporting",
     description:
-      "Generate detailed attendance reports to analyze student engagement and performance.",
+      "Access detailed reports and analytics at your fingertips. Our platform provides valuable insights into attendance trends, helping educators identify students who may need additional support and ensuring timely interventions to enhance student engagement.",
+    color: "bg-[#D2DAFF]",
   },
   {
-    image: integration,
-    title: "Seamless Integration",
+    link: integration,
+    src: "integration",
+    title: "Seamless Integration with Existing Systems",
     description:
-      "Easily track students' attendance and automate attendance recording for accuracy",
+      "Easily integrate our attendance management solution with your current school systems and software. Our platform works well with popular tools and platforms, ensuring a smooth transition and minimal disruption to your existing processes.",
+    color: "bg-[#D2DAFF]",
   },
   {
-    image: userInterface,
-    title: "User-Friendly Interface",
+    link: userInterface,
+    src: "user interface",
+    title: "Enhanced Accuracy and Reliability",
     description:
-      "Teachers and staff can quickly access and update attendance records with minimal effort.",
+      "Eliminate manual errors with our automated attendance tracking system. Our platform ensures that attendance data is recorded accurately in real-time, reducing discrepancies and providing reliable records for teachers and administrators.",
+    color: "bg-[#D2DAFF]",
   },
 ];
