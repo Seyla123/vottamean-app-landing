@@ -7,9 +7,7 @@ const BenefitSection = () => {
   return (
     <div>
       <SectionHeader
-        title={
-          "Show how the platform will make the lives of teachers, students, and admins easier."
-        }
+        title={"Benefits of Using Our Platform"}
         subtitle={"Benefits"}
       />
       <ImageTabs tabs={benefits} className={"flex-row-reverse"} />

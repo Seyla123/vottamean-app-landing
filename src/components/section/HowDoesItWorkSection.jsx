@@ -8,7 +8,8 @@ const HowDoesItWorkSection = () => {
     <section className="w-full py-16">
       <SectionHeader
         subtitle={"How does it work?"}
-        title={"Invest in income-generating real estate, easily."}
+        title={"Effortless Attendance Tracking Made Simple"}
+        underline={"Attendance"}
       />
 
       <ImageTabs tabs={howDoesItWork} />

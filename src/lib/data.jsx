@@ -39,7 +39,6 @@ export const howDoesItWork = [
   },
 ];
 
-
 export const benefits = [
   {
     title: "Log In Easily",
@@ -76,5 +75,37 @@ export const benefits = [
       "The platform generates detailed attendance reports that can be downloaded in various formats (PDF, Excel). These reports provide insights into class attendance patterns and student participation, helping schools make data-driven decisions.",
     imageUrl:
       "https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format",
+  },
+];
+
+import realTime from "@/assets/images/features/real-time.svg";
+import integration from "@/assets/images/features/integration.svg";
+import userInterface from "@/assets/images/features/user-interface.svg";
+import report from "@/assets/images/features/report.svg";
+
+export const features = [
+  {
+    icon: realTime,
+    title: "Real-Time Attendance Marking",
+    description:
+      "Easily track students' attendance and automate attendance recording for accuracy",
+  },
+  {
+    icon: report,
+    title: "Comprehensive Reports",
+    description:
+      "Generate detailed attendance reports to analyze student engagement and performance.",
+  },
+  {
+    icon: integration,
+    title: "Seamless Integration",
+    description:
+      "Easily track students' attendance and automate attendance recording for accuracy",
+  },
+  {
+    icon: userInterface,
+    title: "User-Friendly Interface",
+    description:
+      "Teachers and staff can quickly access and update attendance records with minimal effort.",
   },
 ];
