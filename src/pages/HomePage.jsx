@@ -7,12 +7,12 @@ import BenefitSection from "@/components/section/BenefitSection";
 
 const HomePage = () => {
   return (
-    <>
+    <div className="flex flex-col md:gap-16 gap-8">
       <HeroSection />
       <CompanySection />
       <HowDoesItWorkSection />
       <BenefitSection />
-    </>
+    </div>
   );
 };
 
