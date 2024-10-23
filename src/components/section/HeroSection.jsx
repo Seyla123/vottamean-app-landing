@@ -3,7 +3,7 @@ import heroImage from "../../assets/images/time-39-491b4.png";
 import { Typography } from "../common/Typography";
 
 import { Check } from "lucide-react";
-import underline from "../../assets/icons/Underline.svg";
+import underline from "../../assets/icons/underline-1.svg";
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
 
@@ -13,15 +13,16 @@ const HeroSection = () => {
       {/* CONTENT */}
       <div className="flex flex-col items-start gap-12 w-full">
         <Typography variant={"h1"}>
-          Effortlessly Track and Manage Student{" "}
+          Effortlessly Track and Manage{" "}
           <div className="relative w-fit inline-block">
             <img
               src={underline}
               alt="underline"
-              className="absolute md:-bottom-8 -bottom-4"
+              className="absolute -bottom-2 left-0"
             />
-            Attendance
-          </div>{" "}
+            Student
+          </div>
+          Attendance
         </Typography>
         <ul className="flex flex-col gap-2">
           {[

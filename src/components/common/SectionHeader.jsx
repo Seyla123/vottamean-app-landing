@@ -2,6 +2,7 @@ import React from "react";
 import { Typography } from "./Typography";
 import { Badge } from "../ui/badge";
 import underline2 from "@/assets/icons/Underline_2.svg";
+import underline1 from "@/assets/icons/underline-1.svg";
 
 const SectionHeader = ({ subtitle, title, underline }) => {
   // Function to wrap the underlined word with a span
@@ -18,9 +19,9 @@ const SectionHeader = ({ subtitle, title, underline }) => {
               <span key={index} className="relative inline-block">
                 {part}
                 <img
-                  src={underline2}
+                  src={underline1}
                   alt=""
-                  className="w-full absolute bottom-[-16px] left-0 right-0"
+                  className="w-full absolute bottom-[-8px] left-0 right-0"
                 />
               </span>
             );

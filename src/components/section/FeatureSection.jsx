@@ -15,7 +15,7 @@ const FeatureSection = () => {
       <SectionHeader
         subtitle={"Features"}
         title={"Discover Powerful Features That Simplify Attendance Management"}
-        underline={"Powerful Features"}
+        underline={"Powerful"}
       />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {features.map((feature, index) => (
