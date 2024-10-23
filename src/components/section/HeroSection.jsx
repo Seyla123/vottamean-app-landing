@@ -29,7 +29,7 @@ const HeroSection = () => {
             "Automated Reports and Insights",
             "Effortless Integration and Accessibility",
           ].map((item, index) => (
-            <li className="flex items-center gap-2">
+            <li key={index} className="flex items-center gap-2">
               <div className="grid flex-shrink-0 place-items-center bg-primary text-white rounded-full size-6">
                 <Check size={20} />
               </div>
