@@ -8,6 +8,8 @@ import {
   TabList,
   TabsProvider,
 } from "../ui/tab";
+import { Button } from "../ui/button";
+import { Link } from "react-router-dom";
 
 const tabs = [
   {
@@ -42,20 +44,20 @@ const ImageTabs = () => {
       <div className=" w-full h-full">
         <TabsProvider
           defaultValue="improve"
-          className="md:grid md:grid-cols-12 items-center justify-center"
+          className="md:grid md:grid-cols-12 items-center gap-8 justify-center"
         >
-          <TabImageContainer className="md:col-span-7">
+          <TabImageContainer className="md:col-span-6 h-full">
             {tabs.map((tab, index) => (
               <TabImage key={index} value={tab.id}>
                 <img
                   src={tab.imageUrl}
                   alt={tab.title}
-                  className="w-full h-full rounded-md"
+                  className="w-full h-full object-square object-cover rounded-md"
                 />
               </TabImage>
             ))}
           </TabImageContainer>
-          <TabList className="md:col-span-5 ">
+          <TabList className="md:col-span-6">
             {tabs.map((tab, index) => (
               <TabItem key={index} value={tab.id}>
                 <TabHeader value={tab.id}>{tab.title}</TabHeader>
@@ -72,6 +74,9 @@ const ImageTabs = () => {
                 </TabDes>
               </TabItem>
             ))}
+            <Button asChild className="mt-12">
+              <Link to={"/auth/signin"}>Get Started</Link>
+            </Button>
           </TabList>
         </TabsProvider>
       </div>
