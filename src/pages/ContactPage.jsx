@@ -29,7 +29,7 @@ function SupportForm() {
       message: formData.message,
     };
 
-    // EMailJS Service
+    // EMailJS Service Key
     const serviceId = 'service_i4m68u9';
     const templateId = 'template_d5vnhdd';
     const publicKey = 'p1g7MtP8G_sWbuhZV';
