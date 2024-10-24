@@ -29,10 +29,10 @@ function SupportForm() {
       message: formData.message,
     };
 
-    // EMailJS Service
-    const serviceId = service_i4m68u9;
-    const templateId = template_d5vnhdd;
-    const publicKey = p1g7MtP8G_sWbuhZV;
+    // EMailJS Service - Fetch keys from environment variables
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     // Request Endpoint
     emailjs.send(serviceId, templateId, templateParams, publicKey).then(
