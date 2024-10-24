@@ -2,8 +2,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import Marquee from "../ui/marguee";
 import { reviews } from "@/lib/data";
-import { Card, CardContent, CardFooter, CardTitle } from "../ui/card";
-import { CardHeader } from "@mui/material";
+
 import { Typography } from "../common/Typography";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import SectionHeader from "../common/SectionHeader";
