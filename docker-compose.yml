@@ -8,8 +8,11 @@ services:
       - '5174:80'
     networks:
       - shared-network
-    env_file:
-      - .env
+    environment:
+      # EmailJS Key
+      VITE_EMAILJS_SERVICE_ID: ${VITE_EMAILJS_SERVICE_ID}
+      VITE_EMAILJS_TEMPLATE_ID: ${VITE_EMAILJS_SERVICE_ID}
+      VITE_EMAILJS_PUBLIC_KEY: ${VITE_EMAILJS_SERVICE_ID}
 
 networks:
   shared-network:
