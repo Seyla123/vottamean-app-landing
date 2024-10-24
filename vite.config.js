@@ -24,31 +24,31 @@ export default defineConfig(({ mode }) => {
         },
       },
     },
-    build: {
-      minify: 'terser',
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              return 'vendor';
-            }
-          },
-        },
-      },
-      sourcemap: mode === 'development',
-      cssCodeSplit: true,
-      target: 'es2015',
-      terserOptions: {
-        compress: {
-          drop_console: mode === 'production',
-          drop_debugger: mode === 'production',
-        },
-      },
-      chunkSizeWarningLimit: 1500,
-    },
-    esbuild: {
-      minify: mode === 'production',
-      target: 'es2015',
-    },
+    // build: {
+    //   minify: 'terser',
+    //   rollupOptions: {
+    //     output: {
+    //       manualChunks(id) {
+    //         if (id.includes('node_modules')) {
+    //           return 'vendor';
+    //         }
+    //       },
+    //     },
+    //   },
+    //   sourcemap: mode === 'development',
+    //   cssCodeSplit: true,
+    //   target: 'es2015',
+    //   terserOptions: {
+    //     compress: {
+    //       drop_console: mode === 'production',
+    //       drop_debugger: mode === 'production',
+    //     },
+    //   },
+    //   chunkSizeWarningLimit: 1500,
+    // },
+    // esbuild: {
+    //   minify: mode === 'production',
+    //   target: 'es2015',
+    // },
   };
 });
