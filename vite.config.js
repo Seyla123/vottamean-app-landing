@@ -15,14 +15,14 @@ export default defineConfig(({ mode }) => {
       host: '0.0.0.0',
       port: 5174,
       historyApiFallback: true,
-      // open: '/email/receive-email-support',
-      // proxy: {
-      //   '/api/v1': {
-      //     target: 'http://localhost:8000',
-      //     changeOrigin: true,
-      //     pathRewrite: { '^/api/v1': '' },
-      //   },
-      // },
+      open: '/email/receive-email-support',
+      proxy: {
+        '/api/v1': {
+          target: 'http://localhost:8000',
+          changeOrigin: true,
+          pathRewrite: { '^/api/v1': '' },
+        },
+      },
     },
     // build: {
     //   minify: 'terser',

@@ -3,12 +3,12 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const emailSupportApi = createApi({
   reducerPath: 'emailSupportApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:8000/api/v1',
+    baseUrl: '/api/v1',
   }),
   endpoints: (builder) => ({
     sendEmail: builder.mutation({
       query: (emailData) => ({
-        url: 'email/receive-email-support',
+        url: 'email/receive-email-support/',
         method: 'POST',
         body: emailData,
       }),
