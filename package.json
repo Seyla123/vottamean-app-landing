@@ -3,12 +3,13 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "proxy": "http://localhost:8000/",
+    "proxy": "http://localhost:8000",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
         "lint": "eslint .",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "dev:email": "vite & open-cli http://localhost:5173/api/v1/email/receive-email-support"
     },
     "dependencies": {
         "@emotion/react": "^11.13.3",
