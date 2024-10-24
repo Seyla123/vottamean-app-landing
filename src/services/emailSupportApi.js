@@ -8,7 +8,7 @@ export const emailSupportApi = createApi({
   endpoints: (builder) => ({
     sendEmail: builder.mutation({
       query: (emailData) => ({
-        url: 'email/receive-email-support/',
+        url: 'email/receive-email-support',
         method: 'POST',
         body: emailData,
       }),
