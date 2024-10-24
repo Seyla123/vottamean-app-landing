@@ -1,13 +1,17 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
 import App from './App.jsx';
 import './index.css';
 import CustomProvider from './components/layout/CustomProvider.jsx';
+import store from './store/store.js';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <CustomProvider>
-      <App />
-    </CustomProvider>
+    <Provider store={store}>
+      <CustomProvider>
+        <App />
+      </CustomProvider>
+    </Provider>
   </StrictMode>
 );
