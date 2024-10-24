@@ -9,7 +9,7 @@
         "build": "vite build",
         "lint": "eslint .",
         "preview": "vite preview",
-        "dev:email": "vite & open-cli http://localhost:5173/api/v1/email/receive-email-support"
+        "dev:email": "vite & open-cli http://localhost:5173/email/receive-email-support"
     },
     "dependencies": {
         "@emotion/react": "^11.13.3",
