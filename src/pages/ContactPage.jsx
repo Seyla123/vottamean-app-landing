@@ -32,7 +32,6 @@ function ContactPage() {
       console.error('Error sending email:', err);
     }
   };
-
   return (
     <div>
       <h2>Contact Support</h2>
