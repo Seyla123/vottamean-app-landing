@@ -9,7 +9,7 @@ export const emailSupportApi = createApi({
         : '/api/v1',
     prepareHeaders: (headers) => {
       headers.set('Content-Type', 'application/json');
-      headers.set('credentials', 'include');
+      headers.set('credentials', 'include'); 
       return headers;
     },
   }),
