@@ -8,8 +8,6 @@ services:
       - '5174:80'
     networks:
       - shared-network
-    env_file:
-      - .env
 
 networks:
   shared-network:
