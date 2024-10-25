@@ -73,7 +73,7 @@ export const benefits = [
       "https://images.unsplash.com/photo-1548192746-dd526f154ed9?q=80&w=1200&auto=format",
   },
   {
-    title: "View Attendance History",
+    title: "Efficient Time Saving",
     id: "same",
     icon: <FileSearch2 size={24} />,
     description:
