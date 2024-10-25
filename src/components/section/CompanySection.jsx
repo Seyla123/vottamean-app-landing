@@ -35,7 +35,7 @@ const logos = [
 const CompanySection = () => {
   return (
     <section className='w-full innerWidth'>
-      <Typography className={'text-start'} variant={'h4'}>
+      <Typography className={'lg:text-start text-center'} variant={'h4'}>
         As Seen On
       </Typography>
       <div className='relative  flex h-full w-full rounded-lg flex-col items-center justify-center gap-4 overflow-hidden p-8'>

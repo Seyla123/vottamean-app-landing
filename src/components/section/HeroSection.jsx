@@ -42,7 +42,7 @@ const HeroSection = () => {
       <img
         src={backgroundImage}
         alt='bg'
-        className='absolute -z-1 left-0  w-full h-full inset-0  object-cover md:object-cover md:opacity-50'
+        className='absolute -z-1 left-0  w-full h-full inset-0  object-cover md:object-cover md:opacity-60 opacity-70'
       />
       <motion.div
         className='innerWidth py-16 relative z-[100] h-full  grid lg:grid-cols-2 grid-cols-1 gap-4 items-center'
@@ -98,7 +98,7 @@ const HeroSection = () => {
 
           {/* CTA */}
           <motion.div variants={itemVariants}>
-            <Button asChild>
+            <Button asChild className='shadow-lg'>
               <Link to='https://web.vottamean.com/auth/signup'>
                 Get Started
               </Link>
@@ -112,12 +112,12 @@ const HeroSection = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className='relative lg:h-[800px] flex items-center justify-center lg:w-[1000px]'
+          className='relative mt-16 lg:mt-0 lg:h-[800px] flex items-center justify-center lg:w-[1000px]'
         >
           <img
             src={heroImage}
             alt='hero'
-            className='absolute w-full h-full object-contain'
+            className='lg:absolute w-full h-full object-contain'
           />
         </motion.div>
       </motion.div>

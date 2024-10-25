@@ -104,7 +104,7 @@ export const Card = ({
           </div>
 
           <div
-            className={`relative w-full bg-indigo-50 h-full rounded-lg overflow-hidden order-1  md:order-2`}
+            className={`relative w-full  bg-gradient-to-b from-indigo-100 to-indigo-50 h-full rounded-lg overflow-hidden order-1  md:order-2`}
           >
             {/* <img src={stackingcardBg} alt="bg" className="absolute top-0 z-1" /> */}
             <motion.div
