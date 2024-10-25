@@ -2,48 +2,52 @@ import React from "react";
 import { Typography } from "../common/Typography";
 import Marquee from "../ui/marguee";
 import { cn } from "@/lib/utils";
+import logo1 from "@/assets/images/logo-1.png";
+import logo2 from "@/assets/images/logo-2.png";
 
 const logos = [
   {
     name: "Microsoft",
-    img: "https://cdn.simpleicons.org/microsoft/000/fff",
+    img: logo1,
   },
   {
     name: "Apple",
-    img: "https://cdn.simpleicons.org/apple/000/fff",
+    img: logo2,
   },
   {
-    name: "Google",
-    img: "https://cdn.simpleicons.org/google/000/fff",
+    name: "Microsoft",
+    img: logo1,
   },
   {
-    name: "Facebook",
-    img: "https://cdn.simpleicons.org/facebook/000/fff",
+    name: "Apple",
+    img: logo2,
   },
   {
-    name: "LinkedIn",
-    img: "https://cdn.simpleicons.org/linkedin/000/fff",
+    name: "Microsoft",
+    img: logo1,
   },
   {
-    name: "Twitter",
-    img: "https://cdn.simpleicons.org/twitter/000/fff",
+    name: "Apple",
+    img: logo2,
   },
 ];
 
 const CompanySection = () => {
   return (
-    <section className="w-full">
-      <Typography className={"text-center"} variant={"h4"}>
-        Helping teams at the world's best companies
-      </Typography>
-      <div className="relative bg-card flex h-full w-full mt-4 rounded-lg flex-col items-center justify-center gap-4 overflow-hidden  py-28 ">
+    <section className="w-full innerWidth">
+      <div className="relative flex h-full w-full rounded-lg flex-col items-center justify-center gap-4 overflow-hidden py-14">
+        <span className="absolute z-10 left-0 bg-secondary h-full flex items-center">
+          <Typography className={"text-start pr-4"} variant={"h4"}>
+            As Seen On
+          </Typography>
+        </span>
         <Marquee className="[--gap:3rem]">
           {logos.map((logo, idx) => (
             <Logo key={idx} {...logo} />
           ))}
         </Marquee>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#EEF1FF] "></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#EEF1FF]"></div>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-secondary "></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-secondary"></div>
       </div>
     </section>
   );
@@ -51,8 +55,12 @@ const CompanySection = () => {
 
 const Logo = ({ name, img }) => {
   return (
-    <div className={cn("h-12 w-12 cursor-pointer")}>
-      <img src={img} alt={name} />
+    <div className={cn("h-16 w-36 rounded-md bg-background overflow-hidden")}>
+      <img
+        src={img}
+        alt={name}
+        className="w-full h-full object-cover rounded-lg"
+      />
     </div>
   );
 };

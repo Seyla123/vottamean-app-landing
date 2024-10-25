@@ -6,7 +6,7 @@ import CustomCard from "../common/CustomCard";
 
 const BenefitSection = () => {
   return (
-    <section>
+    <section className="innerWidth">
       <SectionHeader
         title={"Elevate Your Attendance Management"}
         subtitle={"Benefits"}

@@ -1,71 +1,58 @@
-import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useState } from "react";
+import { useSendEmailMutation } from "../services/emailSupportApi";
 
-function SupportForm() {
-  // Form State
+function ContactPage() {
   const [formData, setFormData] = useState({
-    userEmail: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
+  const [sendEmail, { isLoading, isSuccess, isError, error }] =
+    useSendEmailMutation();
 
-  // Handle form changes
-  const handleChange = (e) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const { name, email, message } = formData;
 
-    // Templates
-    const templateParams = {
-      email_id: formData.userEmail,
-      subject: formData.subject,
-      message: formData.message,
-    };
+    // Log the data before sending
+    console.log("Sending email with data:", { name, email, message });
 
-    // EMailJS Service Key
-    const serviceId = 'service_i4m68u9';
-    const templateId = 'template_d5vnhdd';
-    const publicKey = 'p1g7MtP8G_sWbuhZV';
-
-    // Request Endpoint
-    emailjs.send(serviceId, templateId, templateParams, publicKey).then(
-      (response) => {
-        alert('Email sent successfully!');
-      },
-      (error) => {
-        alert('Failed to send email. Please try again.');
-      }
-    );
+    try {
+      await sendEmail({ name, email, message }).unwrap();
+      alert("Email sent successfully!");
+      // Reset form if needed
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      alert("Failed to send email. Please try again.");
+      console.error("Error sending email:", err);
+    }
   };
-
   return (
     <div>
-      <h1>Contact Support</h1>
+      <h2>Contact Support</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Your Email:</label>
+          <label>Name:</label>
           <input
-            type="email"
-            name="userEmail"
-            value={formData.userEmail}
-            onChange={handleChange}
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleInputChange}
             required
           />
         </div>
         <div>
-          <label>Subject:</label>
+          <label>Email:</label>
           <input
-            type="text"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
             required
           />
         </div>
@@ -74,14 +61,18 @@ function SupportForm() {
           <textarea
             name="message"
             value={formData.message}
-            onChange={handleChange}
+            onChange={handleInputChange}
             required
           />
         </div>
-        <button type="submit">Send Email</button>
+        <button type="submit" disabled={isLoading}>
+          {isLoading ? "Sending..." : "Send Email"}
+        </button>
+        {isSuccess && <p>Message sent successfully!</p>}
+        {isError && <p>Failed to send the message: {error.message}</p>}
       </form>
     </div>
   );
 }
 
-export default SupportForm;
+export default ContactPage;

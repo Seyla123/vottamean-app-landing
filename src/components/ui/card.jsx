@@ -6,7 +6,7 @@ import { Typography } from "../common/Typography";
 const Card = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("rounded-lg bg-card text-card-foreground ", className)}
+    className={cn("rounded-lg text-card-foreground bg-indigo-50 ", className)}
     {...props}
   />
 ));

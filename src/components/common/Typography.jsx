@@ -5,9 +5,9 @@ import { cva } from "class-variance-authority";
 const typographyVariants = cva("", {
   variants: {
     variant: {
-      h1: "font-sans scroll-m-20 text-5xl leading-tight lg:leading-tight font-medium tracking-tight lg:text-6xl",
-      h2: "font-sans mt-8 scroll-m-20 pb-2 text-4xl lg:text-6xl leading-tight lg:leading-tight tracking-tight transition-colors first:mt-0",
-      h3: "font-sans mt-8 scroll-m-20 text-2xl tracking-tight",
+      h1: "font-sans scroll-m-20 text-5xl leading-tight lg:leading-tight font-medium tracking-tight lg:text-7xl",
+      h2: "font-sans mt-8 scroll-m-20 pb-2 text-5xl lg:text-6xl leading-tight lg:leading-tight tracking-tight transition-colors first:mt-0",
+      h3: "font-sans  scroll-m-20 text-2xl tracking-tight",
       h4: "font-sans scroll-m-20 text-xl tracking-tight",
       p: "font-serif text-muted-foreground leading-8 ", //[&:not(:first-child)]:mt-6
       blockquote: "font-serif mt-6 border-l-2 pl-6 italic",

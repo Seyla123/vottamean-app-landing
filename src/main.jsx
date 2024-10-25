@@ -4,7 +4,7 @@ import App from './App.jsx';
 import './index.css';
 import CustomProvider from './components/layout/CustomProvider.jsx';
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <CustomProvider>
       <App />

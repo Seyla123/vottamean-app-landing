@@ -20,7 +20,7 @@ const SectionHeader = ({ subtitle, title, underline }) => {
                 {part}
                 <img
                   src={underline1}
-                  alt=""
+                  alt="underline"
                   className="w-full absolute bottom-[-6px] left-0 right-0"
                 />
               </span>
@@ -33,7 +33,7 @@ const SectionHeader = ({ subtitle, title, underline }) => {
   };
 
   return (
-    <header className="text-center w-full max-w-2xl mx-auto pb-16 md:px-0 px-8">
+    <header className="text-center w-full md:max-w-2xl mx-auto md:pb-16 pb-8 md:pt-32 pt-16 md:px-4">
       <Badge>{subtitle}</Badge>
       <Typography variant={"h2"}>{renderTitle(title, underline)}</Typography>
     </header>
