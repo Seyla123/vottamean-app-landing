@@ -59,7 +59,7 @@ export const benefits = [
     id: "improve",
     icon: <UserRound size={24} />,
     description:
-      "Teachers and administrators log in through a secure, user-friendly interface. With just a few clicks, they can access the dashboard where they can view classes, students, and daily schedules.",
+      "Our all-in-one attendance system simplifies the management of student data, progress tracking, and class scheduling. With real-time attendance tracking and integrated communication features, lectures can streamline operations and boost productivity.",
     imageUrl:
       "https://images.unsplash.com/photo-1709949908058-a08659bfa922?q=80&w=1200&auto=format",
   },
