@@ -1,5 +1,4 @@
-"use client";
-import React, { ReactNode, useState, createContext, useContext } from "react";
+import React, { useState, createContext, useContext, forwardRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useMediaQuery } from "@/hooks/use-media-query";
@@ -24,46 +23,57 @@ export function TabsProvider({ children, defaultValue, className }) {
   );
 }
 
-export function TabList({ children, className }) {
-  return <div className={cn("rounded-sm h-fit", className)}>{children}</div>;
-}
+export const TabList = forwardRef(({ children, className }, ref) => {
+  return (
+    <div ref={ref} className={cn("rounded-sm h-fit", className)}>
+      {children}
+    </div>
+  );
+});
+TabList.displayName = "TabList";
 
-export function TabItem({ children, value, index }) {
+export const TabItem = forwardRef(({ children, value, index }, ref) => {
   const { activeTab, setActiveTab } = useTabs();
 
   return (
     <motion.div
+      ref={ref}
       className={`rounded-lg overflow-hidden mb-2 ${
         activeTab === value
-          ? "active border-2 border-primary  bg-primary"
-          : "bg-transparent border-2 "
+          ? "active border border-dashed bg-primary"
+          : "border border-dashed"
       }`}
       onClick={() => setActiveTab(value)}
     >
       {children}
     </motion.div>
   );
-}
+});
+TabItem.displayName = "TabItem";
 
-export function TabHeader({ children, value }) {
+export const TabHeader = forwardRef(({ children, value }, ref) => {
   const { activeTab } = useTabs();
   return (
-    <h3
-      className={`p-4 cursor-pointer transition-all font-semibold    flex justify-between items-center ${
-        activeTab === value ? "active text-background" : " bg-white"
+    <Typography
+      ref={ref}
+      variant="h4"
+      className={`p-4 lg:p-6 cursor-pointer transition-all flex justify-between items-center ${
+        activeTab === value ? "active text-background" : "bg-background"
       }`}
     >
       {children}
-    </h3>
+    </Typography>
   );
-}
+});
+TabHeader.displayName = "TabHeader";
 
-export function TabDes({ children, value }) {
+export const TabDes = forwardRef(({ children, value }, ref) => {
   const { activeTab } = useTabs();
   return (
     <AnimatePresence mode="sync">
       {activeTab === value && (
         <motion.div
+          ref={ref}
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: "auto", opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
@@ -73,29 +83,32 @@ export function TabDes({ children, value }) {
             delay: 0.14,
           }}
         >
-          <Typography variant={"p"}>{children}</Typography>
+          {children}
         </motion.div>
       )}
     </AnimatePresence>
   );
-}
+});
+TabDes.displayName = "TabDes";
 
-export function TabImageContainer({ children, className }) {
+export const TabImageContainer = forwardRef(({ children, className }, ref) => {
   return (
-    <div className={cn("", className)}>
+    <div ref={ref} className={cn("h-full", className)}>
       <AnimatePresence mode="popLayout">{children}</AnimatePresence>
     </div>
   );
-}
+});
+TabImageContainer.displayName = "TabImageContainer";
 
-export function TabImage({ children, value, index }) {
+export const TabImage = forwardRef(({ children, value, index }, ref) => {
   const { activeTab, isDesktop } = useTabs();
 
   if (activeTab !== value || !isDesktop) return null;
 
   return (
-    <motion.div className="h-[400px] ">
+    <motion.div ref={ref} className="h-full">
       <motion.div
+        className="h-full"
         initial={{ opacity: 0, overflow: "hidden" }}
         animate={{ opacity: 1, overflow: "hidden" }}
         exit={{ opacity: 0, overflow: "hidden" }}
@@ -108,4 +121,5 @@ export function TabImage({ children, value, index }) {
       </motion.div>
     </motion.div>
   );
-}
+});
+TabImage.displayName = "TabImage";

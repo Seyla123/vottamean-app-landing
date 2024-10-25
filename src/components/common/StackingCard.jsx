@@ -4,6 +4,9 @@ import { features } from "@/lib/data";
 import SectionHeader from "./SectionHeader";
 import { Typography } from "./Typography";
 import { Button } from "../ui/button";
+import { Link } from "react-router-dom";
+
+import stackingcardBg from "@/assets/images/stacking-card-bg.webp";
 
 export default function StackingCard() {
   const container = useRef(null);
@@ -12,21 +15,15 @@ export default function StackingCard() {
     offset: ["start start", "end end"],
   });
   return (
-    <>
-      <main className="bg-background" ref={container}>
-        <>
-          <section className=" w-full grid place-content-center ">
-            <SectionHeader
-              subtitle={"Features"}
-              title={
-                "Discover Powerful Features That Simplify Attendance Management"
-              }
-              underline={"Powerful"}
-            />
-          </section>
-        </>
+    <section className="w-full bg-secondary pt-16">
+      <main className="innerWidth" ref={container}>
+        <SectionHeader
+          subtitle={"Features"}
+          title={"Discover our Powerful Features"}
+          underline={"Powerful"}
+        />
 
-        <section className=" w-full ">
+        <section className="md:mt-0 w-full relative">
           {features.map((feature, i) => {
             const targetScale = 1 - (features.length - i) * 0.05;
             return (
@@ -46,7 +43,7 @@ export default function StackingCard() {
           })}
         </section>
       </main>
-    </>
+    </section>
   );
 }
 
@@ -73,7 +70,7 @@ export const Card = ({
   return (
     <div
       ref={container}
-      className="h-screen w-full flex items-center justify-center sticky top-10"
+      className="h-screen w-full flex items-center justify-center sticky top-10 "
     >
       <motion.div
         style={{
@@ -83,16 +80,27 @@ export const Card = ({
         className={`flex flex-col relative ${color} -top-[25%] h-[auto] w-[100%] rounded-xl md:p-16 p-8 origin-top`}
       >
         <div
-          className={`grid grid-cols-1 lg:grid-cols-2 items-center h-full  gap-8`}
+          className={`grid grid-cols-1 md:grid-cols-2 items-center h-full  gap-8`}
         >
-          <div className={`relative  z-10 space-y-8`}>
-            <Typography variant={"h2"}>{title}</Typography>
-            <Typography variant={"p"}>{description}</Typography>
+          <div
+            className={`relative order-2 md:order-1 z-10 space-y-8 text-white`}
+          >
+            <h2 className="text-3xl md:text-6xl">{title}</h2>
+            <Typography variant={"p"} className={"text-muted"}>
+              {description}
+            </Typography>
             {/* button cta */}
-            <Button>Get Started</Button>
+            <Button asChild variant={"secondary"}>
+              <Link to={"https://web.vottamean.com/auth/signup"}>
+                Get Started
+              </Link>
+            </Button>
           </div>
 
-          <div className={`relative w-full h-full rounded-lg overflow-hidden `}>
+          <div
+            className={`relative w-full bg-indigo-50 h-full rounded-lg overflow-hidden order-1  md:order-2`}
+          >
+            {/* <img src={stackingcardBg} alt="bg" className="absolute top-0 z-1" /> */}
             <motion.div
               className={`w-full h-full`}
               style={{ scale: imageScale }}

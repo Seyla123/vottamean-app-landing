@@ -5,7 +5,7 @@ import { howDoesItWork } from "@/lib/data";
 
 const HowDoesItWorkSection = () => {
   return (
-    <section className="w-full py-16">
+    <section className="innerWidth">
       <SectionHeader
         subtitle={"How does it work?"}
         title={"Effortless Attendance Tracking Made Simple"}

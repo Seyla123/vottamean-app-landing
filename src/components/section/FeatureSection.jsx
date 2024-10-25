@@ -6,7 +6,7 @@ import CustomCard from "../common/CustomCard";
 
 const FeatureSection = () => {
   return (
-    <section>
+    <section className="innerWidth">
       <SectionHeader
         subtitle={"Features"}
         title={"Discover Powerful Features That Simplify Attendance Management"}

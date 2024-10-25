@@ -11,6 +11,7 @@ import {
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { Typography } from "./Typography";
 
 const ImageTabs = ({ tabs, className }) => {
   // Check if className includes flex-row-reverse
@@ -21,24 +22,24 @@ const ImageTabs = ({ tabs, className }) => {
       <TabsProvider
         defaultValue="improve"
         className={cn(
-          "grid md:grid-cols-2 grid-cols-1 items-start gap-8 justify-center",
+          "grid lg:grid-cols-2 grid-cols-1 items-start gap-8 justify-center",
           className
         )}
       >
         <TabImageContainer
-          className={cn("h-full", isReversed && "md:order-last")}
+          className={cn("h-full", isReversed && "lg:order-last")}
         >
           {tabs.map((tab, index) => (
             <TabImage key={index} value={tab.id}>
               <img
                 src={tab.imageUrl}
                 alt={tab.title}
-                className="w-full h-full object-square object-cover rounded-md"
+                className="w-full  h-[600px] object-square object-cover rounded-lg"
               />
             </TabImage>
           ))}
         </TabImageContainer>
-        <TabList className={cn("", isReversed && "md:order-first")}>
+        <TabList className={cn("", isReversed && "lg:order-first")}>
           {tabs.map((tab, index) => (
             <TabItem key={index} value={tab.id}>
               <TabHeader value={tab.id}>
@@ -48,9 +49,12 @@ const ImageTabs = ({ tabs, className }) => {
                 </span>
               </TabHeader>
               <TabDes value={tab.id}>
-                <p className={`bg-background text-muted-foreground p-3`}>
+                <Typography
+                  variant={"p"}
+                  className={"bg-background p-4 md:p-6"}
+                >
                   {tab.description}
-                </p>
+                </Typography>
 
                 <img
                   src={tab.imageUrl}
@@ -60,8 +64,10 @@ const ImageTabs = ({ tabs, className }) => {
               </TabDes>
             </TabItem>
           ))}
-          <Button asChild className="mt-12">
-            <Link to={"/auth/signin"}>Try It Now</Link>
+          <Button asChild className="md:mt-8">
+            <Link to={"https://web.vottamean.com/auth/signup"}>
+              Try it free
+            </Link>
           </Button>
         </TabList>
       </TabsProvider>

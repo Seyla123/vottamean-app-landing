@@ -2,10 +2,16 @@ import {
   UserRound,
   ListChecks,
   FileSearch2,
-  ChartPie,
   Rocket,
   Hourglass,
   NotepadText,
+  DoorOpen,
+  Clock,
+  Trophy,
+  BriefcaseBusiness,
+  ChartPie,
+  DoorClosed,
+  GraduationCap,
 } from "lucide-react";
 
 export const howDoesItWork = [
@@ -118,32 +124,32 @@ export const features = [
     src: "real time",
     title: "Time-Saving Automation",
     description:
-      "Streamline your attendance process and save hours each week. By automating attendance marking and reporting, educators can focus more on teaching and less on administrative tasks, leading to a more productive classroom environment.",
-    color: "bg-card",
+      "Automate attendance marking and reporting, saving hours each week for educators to focus on teaching.",
+    color: "bg-primary",
   },
   {
     link: report,
     src: "report",
-    title: "Comprehensive Insights and Reporting",
+    title: "Comprehensive Insights",
     description:
-      "Access detailed reports and analytics at your fingertips. Our platform provides valuable insights into attendance trends, helping educators identify students who may need additional support and ensuring timely interventions to enhance student engagement.",
-    color: "bg-card",
+      "Access detailed reports and analytics to track attendance trends and support student engagement.",
+    color: "bg-primary",
   },
   {
     link: integration,
     src: "integration",
-    title: "Seamless Integration with Existing Systems",
+    title: "Seamless Integration",
     description:
-      "Easily integrate our attendance management solution with your current school systems and software. Our platform works well with popular tools and platforms, ensuring a smooth transition and minimal disruption to your existing processes.",
-    color: "bg-card",
+      "Integrate with your existing systems smoothly, ensuring minimal disruption to processes.",
+    color: "bg-primary",
   },
   {
     link: userInterface,
     src: "user interface",
-    title: "Enhanced Accuracy and Reliability",
+    title: "Enhanced Accuracy",
     description:
-      "Eliminate manual errors with our automated attendance tracking system. Our platform ensures that attendance data is recorded accurately in real-time, reducing discrepancies and providing reliable records for teachers and administrators.",
-    color: "bg-card",
+      "Automate real-time tracking to reduce errors and ensure reliable attendance records.",
+    color: "bg-primary",
   },
 ];
 
@@ -208,5 +214,129 @@ export const reviews = [
     role: "Education Consultant",
     body: "Compared to other systems, this is by far the most cost-effective solution we've used. It delivers top-notch performance without breaking the bank.",
     img: "https://images.unsplash.com/photo-1531256456869-ce942a665e80?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
+
+export const tabs = [
+  {
+    title: "How does the automated attendance tracking system work?",
+    description:
+      "The system uses an intuitive interface where teachers can easily mark attendance with just a few clicks. It automatically logs student attendance data in real-time, eliminating manual errors and providing instant access to accurate records.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1490682143684-14369e18dce8?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    title: "Can I generate reports based on attendance data?",
+    description:
+      "Yes! Our system allows you to generate detailed reports on student attendance, including daily, weekly, and monthly summaries. The real-time reporting feature ensures you always have up-to-date information at your fingertips.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    title: "How does the app help save time for teachers and staff?",
+    description:
+      "By automating the entire attendance process, the app reduces the time spent on manual data entry by up to 50%. Teachers can quickly mark attendance and focus more on teaching, while administrators get immediate access to comprehensive attendance records.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1501889088093-90b27410d97e?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    title: "Is the attendance data secure and private?",
+    description:
+      "Absolutely! We take data security very seriously. All attendance data is securely stored and encrypted to ensure student privacy. Only authorized personnel have access to the records.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1501889088093-90b27410d97e?q=80&w=800&auto=format&fit=crop",
+  },
+  {
+    title:
+      " How affordable is your attendance management system compared to others?",
+    description:
+      "Our solution is up to 30% cheaper than most attendance management platforms, offering all the essential features at a significantly lower cost without compromising quality.",
+    imageUrl:
+      "https://images.unsplash.com/photo-1501889088093-90b27410d97e?q=80&w=800&auto=format&fit=crop",
+  },
+];
+
+export const pricingPlans = [
+  {
+    title: "Free",
+    price: "$0",
+    duration: "month",
+    features: [
+      {
+        icon: <BriefcaseBusiness size={24} />,
+        title: "Limited access to 10 teachers account",
+      },
+      {
+        icon: <GraduationCap size={24} />,
+        title: "Limited access to 40+ students",
+      },
+      {
+        icon: <ChartPie size={24} />,
+        title: "Limited file size to reports",
+      },
+      {
+        icon: <DoorClosed size={24} />,
+        title: "Limited access to 4 classes",
+      },
+      {
+        icon: <Clock size={24} />,
+        title: "Limited priority email support",
+      },
+    ],
+  },
+  {
+    title: "Basic",
+    price: "$9",
+    duration: "month",
+    popular: true,
+    features: [
+      {
+        icon: <BriefcaseBusiness size={24} />,
+        title: "Access to 30 teachers account",
+      },
+      {
+        icon: <GraduationCap size={24} />,
+        title: "Access to 150+ students",
+      },
+      {
+        icon: <ChartPie size={24} />,
+        title: "Increased file size limit for reports",
+      },
+      {
+        icon: <DoorOpen size={24} />,
+        title: "Access to 10 classes",
+      },
+      {
+        icon: <Clock size={24} />,
+        title: "Priority email support",
+      },
+    ],
+  },
+  {
+    title: "Premium",
+    price: "$20",
+    duration: "month",
+    features: [
+      {
+        icon: <BriefcaseBusiness size={24} />,
+        title: "Unlimited teachers account",
+      },
+      {
+        icon: <GraduationCap size={24} />,
+        title: "Unlimited access to students",
+      },
+      {
+        icon: <ChartPie size={24} />,
+        title: "Unlimited file size for reports",
+      },
+      {
+        icon: <DoorOpen size={24} />,
+        title: "Unlimited access to classes",
+      },
+      {
+        icon: <Trophy size={24} />,
+        title: "Exclusive access to advanced analytics",
+      },
+    ],
   },
 ];
