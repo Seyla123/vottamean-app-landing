@@ -72,9 +72,7 @@ const ImageTabs = ({ tabs, className }) => {
             </TabItem>
           ))}
           <Button asChild className='md:mt-8'>
-            <Link to={'https://web.vottamean.com/auth/signup'}>
-              Try it free
-            </Link>
+            <Link to={'/'}>Try it free</Link>
           </Button>
         </TabList>
       </TabsProvider>

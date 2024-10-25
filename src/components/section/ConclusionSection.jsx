@@ -1,30 +1,28 @@
-import React from "react";
-import { Typography } from "../common/Typography";
-import { Button } from "../ui/button";
-import { Link } from "react-router-dom";
-import macbookPro from "@/assets/images/macbook-pro.svg";
-import iphoneMark from "@/assets/images/iPhone-mark.svg";
-import iphoneAttendance from "@/assets/images/iphone-attendance.png";
-import { Folder, Highlighter } from "lucide-react";
+import React from 'react';
+import { Typography } from '../common/Typography';
+import { Button } from '../ui/button';
+import { Link } from 'react-router-dom';
+import macbookPro from '@/assets/images/macbook-pro.svg';
+import iphoneMark from '@/assets/images/iPhone-mark.svg';
+import iphoneAttendance from '@/assets/images/iphone-attendance.png';
+import { Folder, Highlighter } from 'lucide-react';
 
 const ConclusionSection = () => {
   return (
-    <section className="innerWidth pb-44">
-      <div className="relative h-auto rounded-lg bg-black text-white grid grid-cols-1 lg:grid-cols-2 gap-4 overflow-hidden justify-between">
-        <div className="relative flex flex-col justify-center items-start p-8 md:p-16">
-          <Typography variant={"h2"} className={"capitalize"}>
+    <section className='innerWidth pb-44'>
+      <div className='relative h-auto rounded-lg bg-black text-white grid grid-cols-1 lg:grid-cols-2 gap-4 overflow-hidden justify-between'>
+        <div className='relative flex flex-col justify-center items-start p-8 md:p-16'>
+          <Typography variant={'h2'} className={'capitalize'}>
             Just One Click to Mark Your Attendance
           </Typography>
-          <Button asChild variant={"secondary"} className={"mt-8"}>
-            <Link to={"https://web.vottamean.com/auth/signup"}>
-              Get Started
-            </Link>
+          <Button asChild variant={'secondary'} className={'mt-8'}>
+            <Link to={'/'}>Get Started</Link>
           </Button>
         </div>
         <img
           src={iphoneAttendance}
-          alt="iphone mockup"
-          className="w-full md:w-1/2 lg:w-full mx-auto h-full object-cover"
+          alt='iphone mockup'
+          className='w-full md:w-1/2 lg:w-full mx-auto h-full object-cover'
         />
       </div>
     </section>

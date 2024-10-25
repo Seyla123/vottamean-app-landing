@@ -9,6 +9,7 @@ import { Typography } from '@/components/common/Typography';
 import { cn } from '@/lib/utils';
 import SectionHeader from '@/components/common/SectionHeader';
 import { Textarea } from '../ui/textarea';
+import FAQSection from './FAQSection';
 
 export default function ContactSection() {
   const [formData, setFormData] = React.useState({
@@ -44,7 +45,7 @@ export default function ContactSection() {
   return (
     <section className=''>
       <SectionHeader subtitle={'Contact'} title={'Get in Touch'} />
-      <div className='innerWidth mx-auto space-y-8'>
+      <div className='innerWidth mx-auto space-y-4 md:space-y-8'>
         {/* Contact Info Cards */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
           <div className='p-4 md:p-8 rounded-lg border border-dashed'>
@@ -141,7 +142,7 @@ export default function ContactSection() {
 
               <Button
                 type='submit'
-                className={cn('max-w-xl w-full')}
+                className={cn('md:float-right')}
                 disabled={isLoading}
               >
                 {isLoading ? 'Submitting...' : 'Submit'}
@@ -150,6 +151,7 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
+      <FAQSection />
     </section>
   );
 }
