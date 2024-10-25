@@ -86,7 +86,7 @@ export const benefits = [
     id: "work",
     icon: <ChartPie size={24} />,
     description:
-      "The platform generates detailed attendance reports that can be downloaded in various formats (PDF, Excel). These reports provide insights into class attendance patterns and student participation, helping schools make data-driven decisions.",
+    "Our web application prioritizes students safety by providing timely notifications to guardians about attendance. This transparency provide a better awareness which fosters trust for parents while supporting schools in creating a safer educational environment.",
     imageUrl:
       "https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format",
   },
