@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 import { Squash as Hamburger } from "hamburger-react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import vottameanLogo from "../../assets/icons/LOGO_vottamean.svg";
+import vottameanLogo from "../../assets/images/new-logo.svg";
 
 const navLinks = [
   { title: "How it works", href: "#" },
