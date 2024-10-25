@@ -64,7 +64,7 @@ export const benefits = [
       "https://images.unsplash.com/photo-1709949908058-a08659bfa922?q=80&w=1200&auto=format",
   },
   {
-    title: "Real-Time Attendance Marking",
+    title: "Data Accuracy",
     id: "important",
     icon: <ListChecks size={24} />,
     description:
