@@ -69,10 +69,7 @@ const Navbar = () => {
       {/* LOGO */}
       <motion.div whileTap={{ scale: 0.98 }} transition={{ duration: 0.2 }}>
         <Link to={'/'} className='flex items-center gap-2 cursor-pointer'>
-          <img src={vottameanLogo} alt='logo' className='xl:size-10 size-8' />
-          <span className='font-bold xl:text-2xl text-xl text-primary'>
-            Vottamean
-          </span>
+          <img src={vottameanLogo} alt='logo' className='w-full size-8' />
         </Link>
       </motion.div>
 
