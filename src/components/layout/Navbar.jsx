@@ -19,11 +19,11 @@ const Navbar = () => {
 
   const handleScroll = (e, href) => {
     e.preventDefault();
-    setIsMenuOpen(false); // Close mobile menu if open
+    setIsMenuOpen(false);
 
     const element = document.querySelector(href);
     if (element) {
-      const offset = 80; // Adjust this value based on your navbar height
+      const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -33,6 +33,7 @@ const Navbar = () => {
       });
     }
   };
+
   const navVariants = {
     hidden: { y: -20, opacity: 0 },
     visible: {
@@ -67,11 +68,7 @@ const Navbar = () => {
     >
       {/* LOGO */}
       <motion.div whileTap={{ scale: 0.98 }} transition={{ duration: 0.2 }}>
-        <Link
-          to={'/'}
-          onClick={e => handleScroll(e, '#hero')}
-          className='flex items-center gap-2 cursor-pointer'
-        >
+        <Link to={'/'} className='flex items-center gap-2 cursor-pointer'>
           <img src={vottameanLogo} alt='logo' className='xl:size-10 size-8' />
           <span className='font-bold xl:text-2xl text-xl text-primary'>
             Vottamean
@@ -108,7 +105,9 @@ const Navbar = () => {
       </ul>
 
       {/* NAVBAR DROPDOWN MENU */}
-      <AnimatePresence>{isMenuOpen && <NavbarDropDown />}</AnimatePresence>
+      <AnimatePresence>
+        {isMenuOpen && <NavbarDropDown setIsMenuOpen={setIsMenuOpen} />}
+      </AnimatePresence>
 
       {/* CTA */}
       <div className='xl:hidden block'>
@@ -137,7 +136,7 @@ const Navbar = () => {
   );
 };
 
-const NavbarDropDown = () => {
+const NavbarDropDown = ({ setIsMenuOpen }) => {
   const handleScroll = (e, href) => {
     e.preventDefault();
     setIsMenuOpen(false);
@@ -154,6 +153,7 @@ const NavbarDropDown = () => {
       });
     }
   };
+
   const dropdownVariants = {
     hidden: {
       opacity: 0,
@@ -204,10 +204,18 @@ const NavbarDropDown = () => {
           <Button
             variant={'ghost'}
             asChild
-            className='text-muted-foreground w-full'
+            className='text-muted-foreground relative group w-full'
             onClick={e => handleScroll(e, link.href)}
           >
-            <Link to={link.href}>{link.title}</Link>
+            <Link to={link.href}>
+              {link.title}
+              <motion.span
+                className='absolute bottom-0 left-0 w-full h-0.5 bg-primary origin-center'
+                initial={{ scaleX: 0 }}
+                whileHover={{ scaleX: 1 }}
+                transition={{ duration: 0.2 }}
+              />
+            </Link>
           </Button>
         </motion.li>
       ))}

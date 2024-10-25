@@ -83,20 +83,18 @@ export const Card = ({
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className={`flex flex-col relative ${color} -top-[25%] h-[auto] w-[100%] rounded-xl md:p-16 p-8 origin-top`}
+        className={`flex flex-col relative ${color} border -top-[25%] h-[auto] w-[100%] rounded-xl md:p-16 p-8 origin-top`}
       >
         <div
-          className={`grid grid-cols-1 md:grid-cols-2 items-center h-full  gap-8`}
+          className={`grid grid-cols-1 md:grid-cols-2 items-center h-full gap-8`}
         >
-          <div
-            className={`relative order-2 md:order-1 z-10 space-y-8 text-white`}
-          >
+          <div className={`relative order-2 md:order-1 z-10 space-y-8 `}>
             <h2 className='text-3xl md:text-6xl'>{title}</h2>
-            <Typography variant={'p'} className={'text-muted'}>
+            <Typography variant={'p'} className={'text-muted-foreground'}>
               {description}
             </Typography>
             {/* button cta */}
-            <Button asChild variant={'secondary'}>
+            <Button asChild>
               <Link to={'https://web.vottamean.com/auth/signup'}>
                 Get Started
               </Link>
@@ -104,7 +102,7 @@ export const Card = ({
           </div>
 
           <div
-            className={`relative w-full  bg-gradient-to-b from-indigo-100 to-indigo-50 h-full rounded-lg overflow-hidden order-1  md:order-2`}
+            className={`relative w-full   h-full rounded-lg overflow-hidden order-1  md:order-2`}
           >
             {/* <img src={stackingcardBg} alt="bg" className="absolute top-0 z-1" /> */}
             <motion.div

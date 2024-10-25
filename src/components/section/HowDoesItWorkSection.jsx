@@ -11,8 +11,7 @@ const HowDoesItWorkSection = ({ id }) => {
         title={'Effortless Attendance Tracking Made Simple'}
         underline={'Attendance'}
       />
-
-      <ImageTabs tabs={howDoesItWork} />
+      <ImageTabs tabs={howDoesItWork} className={''} />
     </section>
   );
 };
