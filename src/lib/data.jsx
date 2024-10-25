@@ -77,7 +77,7 @@ export const benefits = [
     id: "same",
     icon: <FileSearch2 size={24} />,
     description:
-      "Administrators and teachers can quickly access attendance history for each student. The system maintains a comprehensive record of all sessions, allowing users to monitor trends, spot absences, and provide support when necessary.",
+      "Say goodbye to the complexities of juggling multiple tools! Our platform centralizes attendance management with just simple steps of uses. This flexibility saves time and allows lectures to focus more on teaching and less on administrative tasks.",
     imageUrl:
       "https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format",
   },
