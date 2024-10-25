@@ -55,7 +55,7 @@ export const howDoesItWork = [
 
 export const benefits = [
   {
-    title: "Log In Easily",
+    title: "Comprehensive Operation",
     id: "improve",
     icon: <UserRound size={24} />,
     description:
