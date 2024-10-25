@@ -68,7 +68,7 @@ export const benefits = [
     id: "important",
     icon: <ListChecks size={24} />,
     description:
-      "Teachers can mark attendance in real-time directly from their devices. Whether it’s for one student or the entire class, attendance is recorded instantly, reducing errors and time spent on manual logging.",
+      "Designed for all levels of tech-savviness, our platform enables accurate, real-time data capture and secure storage. This integration not only reduces paperwork but also offers precise insights, enhancing overall efficiency and making daily operations smoother for lectures and administrators alike.",
     imageUrl:
       "https://images.unsplash.com/photo-1548192746-dd526f154ed9?q=80&w=1200&auto=format",
   },
