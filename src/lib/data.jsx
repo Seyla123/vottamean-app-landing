@@ -55,38 +55,38 @@ export const howDoesItWork = [
 
 export const benefits = [
   {
-    title: "Log In Easily",
+    title: "Comprehensive Operation",
     id: "improve",
     icon: <UserRound size={24} />,
     description:
-      "Teachers and administrators log in through a secure, user-friendly interface. With just a few clicks, they can access the dashboard where they can view classes, students, and daily schedules.",
+      "Our all-in-one attendance system simplifies the management of student data, progress tracking, and class scheduling. With real-time attendance tracking and integrated communication features, lectures can streamline operations and boost productivity.",
     imageUrl:
       "https://images.unsplash.com/photo-1709949908058-a08659bfa922?q=80&w=1200&auto=format",
   },
   {
-    title: "Real-Time Attendance Marking",
+    title: "Data Accuracy",
     id: "important",
     icon: <ListChecks size={24} />,
     description:
-      "Teachers can mark attendance in real-time directly from their devices. Whether it’s for one student or the entire class, attendance is recorded instantly, reducing errors and time spent on manual logging.",
+      "Designed for all levels of tech-savviness, our platform enables accurate, real-time data capture and secure storage. This integration not only reduces paperwork but also offers precise insights, enhancing overall efficiency and making daily operations smoother for lectures and administrators alike.",
     imageUrl:
       "https://images.unsplash.com/photo-1548192746-dd526f154ed9?q=80&w=1200&auto=format",
   },
   {
-    title: "View Attendance History",
+    title: "Efficient Time Saving",
     id: "same",
     icon: <FileSearch2 size={24} />,
     description:
-      "Administrators and teachers can quickly access attendance history for each student. The system maintains a comprehensive record of all sessions, allowing users to monitor trends, spot absences, and provide support when necessary.",
+      "Say goodbye to the complexities of juggling multiple tools! Our platform centralizes attendance management with just simple steps of uses. This flexibility saves time and allows lectures to focus more on teaching and less on administrative tasks.",
     imageUrl:
       "https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format",
   },
   {
-    title: "Generate and Download Reports",
+    title: "Reliable Safety Concerns",
     id: "work",
     icon: <ChartPie size={24} />,
     description:
-      "The platform generates detailed attendance reports that can be downloaded in various formats (PDF, Excel). These reports provide insights into class attendance patterns and student participation, helping schools make data-driven decisions.",
+    "Our web application prioritizes students safety by providing timely notifications to guardians about attendance. This transparency provide a better awareness which fosters trust for parents while supporting schools in creating a safer educational environment.",
     imageUrl:
       "https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format",
   },
