@@ -7,10 +7,10 @@ import { Badge } from '../ui/badge';
 const PricingCard = ({ item }) => {
   return (
     <div
-      className={`relative rounded-lg border grid grid-cols-1 border-dashed h-auto ${
+      className={`relative rounded-lg grid grid-cols-1  h-auto ${
         item.title === 'Basic'
-          ? ' bg-gradient-to-b from-indigo-100 to-indigo-50'
-          : 'bg-background'
+          ? ' border-4 border-background shadow-[rgba(7,_65,_210,_0.1)_0px_9px_10px] bg-gradient-to-b from-purple-50 to-indigo-50'
+          : 'bg-background border  border-dashed'
       }`}
     >
       {/* CARD HEADER */}

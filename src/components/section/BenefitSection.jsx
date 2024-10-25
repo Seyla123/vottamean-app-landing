@@ -4,9 +4,9 @@ import ImageTabs from "../common/ImageTabs";
 import { benefits, benefitCards } from "@/lib/data";
 import CustomCard from "../common/CustomCard";
 
-const BenefitSection = () => {
+const BenefitSection = ({id}) => {
   return (
-    <section className="innerWidth">
+    <section id={id} className="innerWidth">
       <SectionHeader
         title={"Elevate Your Attendance Management"}
         subtitle={"Benefits"}

@@ -6,17 +6,33 @@ import { motion, AnimatePresence } from 'framer-motion';
 import vottameanLogo from '../../assets/icons/logo-v4.svg';
 
 const navLinks = [
-  { title: 'How it works', href: '#' },
-  { title: 'Benifits', href: '#' },
-  { title: 'Features', href: '#' },
-  { title: 'Testimonials', href: '#' },
-  { title: 'FAQs', href: '#' },
-  { title: 'Pricing', href: '#' },
+  { title: 'How it works', href: '#how-it-works' },
+  { title: 'Benifits', href: '#benefits' },
+  { title: 'Testimonials', href: '#testimonials' },
+  { title: 'FAQs', href: '#faqs' },
+  { title: 'Pricing', href: '#pricing' },
+  { title: 'Features', href: '#features' },
 ];
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleScroll = (e, href) => {
+    e.preventDefault();
+    setIsMenuOpen(false); // Close mobile menu if open
+
+    const element = document.querySelector(href);
+    if (element) {
+      const offset = 80; // Adjust this value based on your navbar height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
   const navVariants = {
     hidden: { y: -20, opacity: 0 },
     visible: {
@@ -47,12 +63,19 @@ const Navbar = () => {
       initial='hidden'
       animate='visible'
       variants={navVariants}
-      className='w-full sticky top-0 z-[100] px-4 xl:px-8 flex items-center justify-between xl:py-4 py-2 border-b bg-background/90 backdrop-blur-lg'
+      className='w-full sticky top-0 z-[999] px-4 xl:px-8 flex items-center justify-between xl:py-4 py-2 border-b bg-background'
     >
       {/* LOGO */}
       <motion.div whileTap={{ scale: 0.98 }} transition={{ duration: 0.2 }}>
-        <Link to={'/'} className='flex items-center gap-2'>
-          <img src={vottameanLogo} alt='logo' className='w-full size-10' />
+        <Link
+          to={'/'}
+          onClick={e => handleScroll(e, '#hero')}
+          className='flex items-center gap-2 cursor-pointer'
+        >
+          <img src={vottameanLogo} alt='logo' className='xl:size-10 size-8' />
+          <span className='font-bold xl:text-2xl text-xl text-primary'>
+            Vottamean
+          </span>
         </Link>
       </motion.div>
 
@@ -68,12 +91,14 @@ const Navbar = () => {
               variant={'ghost'}
               asChild
               className='text-muted-foreground relative group'
+              onClick={e => handleScroll(e, link.href)}
             >
               <Link to={link.href}>
                 {link.title}
                 <motion.span
                   className='absolute bottom-0 left-0 w-full h-0.5 bg-primary origin-left'
                   initial={{ scaleX: 0 }}
+                  whileHover={{ scaleX: 1 }}
                   transition={{ duration: 0.2 }}
                 />
               </Link>
@@ -113,6 +138,22 @@ const Navbar = () => {
 };
 
 const NavbarDropDown = () => {
+  const handleScroll = (e, href) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+
+    const element = document.querySelector(href);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
   const dropdownVariants = {
     hidden: {
       opacity: 0,
@@ -164,6 +205,7 @@ const NavbarDropDown = () => {
             variant={'ghost'}
             asChild
             className='text-muted-foreground w-full'
+            onClick={e => handleScroll(e, link.href)}
           >
             <Link to={link.href}>{link.title}</Link>
           </Button>

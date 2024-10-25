@@ -39,9 +39,9 @@ const ReviewCard = ({ img, name, role, body }) => {
   );
 };
 
-const TestiminialSection = () => {
+const TestiminialSection = ({id}) => {
   return (
-    <section className="innerWidth relative flex h-full w-full flex-col items-center justify-center overflow-hidden">
+    <section id={id} className="innerWidth relative flex h-full w-full flex-col items-center justify-center overflow-hidden">
       <SectionHeader
         subtitle={"Testimonial"}
         title={"Build Trust Through User Feedback"}

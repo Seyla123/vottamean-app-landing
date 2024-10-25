@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import CompanySection from './CompanySection';
 import backgroundImage from '../../assets/images/light-gredient-3.avif';
 
-const HeroSection = () => {
+const HeroSection = ({ id }) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -37,7 +37,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className='w-full relative h-auto overflow-hidden '>
+    <section id={id} className='w-full relative h-auto overflow-hidden '>
       {/* BACKGROUND */}
       <img
         src={backgroundImage}

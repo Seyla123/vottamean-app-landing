@@ -9,14 +9,14 @@ import gredientBg from '../../assets/images/light-gredient-bg.png';
 
 import stackingcardBg from '@/assets/images/stacking-card-bg.webp';
 
-export default function StackingCard() {
+export default function StackingCard({ id }) {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ['start start', 'end end'],
   });
   return (
-    <section className='relative w-full bg-secondary'>
+    <section id={id} className='relative w-full bg-secondary'>
       <img
         src={gredientBg}
         alt=''
