@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => {
       open: '/email/receive-email-support',
       proxy: {
         '/api/v1': {
-          target: 'http://localhost:8000',
+          target: 'https://web.vottamean.com',
           changeOrigin: true,
           pathRewrite: { '^/api/v1': '' },
         },
