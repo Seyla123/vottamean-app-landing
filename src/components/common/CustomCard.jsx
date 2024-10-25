@@ -4,19 +4,19 @@ import {
   CardTitle,
   CardContent,
   CardDescription,
-} from "../ui/card";
+} from '../ui/card';
 
 const CustomCard = ({ data }) => {
   return (
     <Card>
       <CardHeader>
-        <div className="mb-4">
+        <div className='md:mb-16 mb-8'>
           {data.icon ? (
-            <div className="bg-primary text-white rounded-lg md:p-3 p-2 w-fit">
+            <div className='bg-primary text-white rounded-lg md:p-3 p-2 w-fit'>
               {data.icon}
             </div>
           ) : (
-            <img src={data.image} alt={data.title} className="w-2/3 md:w-1/3" />
+            <img src={data.image} alt={data.title} className='w-2/3 md:w-1/3' />
           )}
         </div>
         <CardTitle>{data.title}</CardTitle>

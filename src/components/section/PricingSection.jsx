@@ -3,9 +3,9 @@ import SectionHeader from "../common/SectionHeader";
 import { pricingPlans } from "@/lib/data";
 import PricingCard from "../common/PricingCard";
 
-const PricingSection = () => {
+const PricingSection = ({id}) => {
   return (
-    <section className="innerWidth">
+    <section id={id} className="innerWidth">
       <SectionHeader
         subtitle={"Pricing"}
         title={"Choose the right plan for your needs"}
