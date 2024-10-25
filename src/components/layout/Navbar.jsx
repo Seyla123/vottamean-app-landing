@@ -228,6 +228,9 @@ const NavbarDropDown = ({ setIsMenuOpen }) => {
             variant={'ghost'}
             asChild
             className='text-muted-foreground mt-6 w-full'
+            onClick={() => {
+              setIsMenuOpen(false);
+            }}
           >
             <Link to={'/contact'}>Contact us</Link>
           </Button>
