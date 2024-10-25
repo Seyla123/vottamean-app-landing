@@ -1,29 +1,35 @@
-import { useTransform, motion, useScroll, MotionValue } from "framer-motion";
-import { useRef } from "react";
-import { features } from "@/lib/data";
-import SectionHeader from "./SectionHeader";
-import { Typography } from "./Typography";
-import { Button } from "../ui/button";
-import { Link } from "react-router-dom";
+import { useTransform, motion, useScroll, MotionValue } from 'framer-motion';
+import { useRef } from 'react';
+import { features } from '@/lib/data';
+import SectionHeader from './SectionHeader';
+import { Typography } from './Typography';
+import { Button } from '../ui/button';
+import { Link } from 'react-router-dom';
+import gredientBg from '../../assets/images/light-gredient-bg.png';
 
-import stackingcardBg from "@/assets/images/stacking-card-bg.webp";
+import stackingcardBg from '@/assets/images/stacking-card-bg.webp';
 
 export default function StackingCard() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start start", "end end"],
+    offset: ['start start', 'end end'],
   });
   return (
-    <section className="w-full bg-secondary pt-16">
-      <main className="innerWidth" ref={container}>
+    <section className='relative w-full bg-secondary'>
+      <img
+        src={gredientBg}
+        alt=''
+        className='absolute w-full h-full object-cover pointer-events-none -z-1 inset-0'
+      />
+      <main className='innerWidth relative z-10' ref={container}>
         <SectionHeader
-          subtitle={"Features"}
-          title={"Discover our Powerful Features"}
-          underline={"Powerful"}
+          subtitle={'Features'}
+          title={'Discover our Powerful Features'}
+          underline={'Powerful'}
         />
 
-        <section className="md:mt-0 w-full relative">
+        <section className='md:mt-0 w-full relative'>
           {features.map((feature, i) => {
             const targetScale = 1 - (features.length - i) * 0.05;
             return (
@@ -61,7 +67,7 @@ export const Card = ({
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start end", "start start"],
+    offset: ['start end', 'start start'],
   });
 
   const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
@@ -70,7 +76,7 @@ export const Card = ({
   return (
     <div
       ref={container}
-      className="h-screen w-full flex items-center justify-center sticky top-10 "
+      className='h-screen w-full flex items-center justify-center sticky top-10 '
     >
       <motion.div
         style={{
@@ -85,13 +91,13 @@ export const Card = ({
           <div
             className={`relative order-2 md:order-1 z-10 space-y-8 text-white`}
           >
-            <h2 className="text-3xl md:text-6xl">{title}</h2>
-            <Typography variant={"p"} className={"text-muted"}>
+            <h2 className='text-3xl md:text-6xl'>{title}</h2>
+            <Typography variant={'p'} className={'text-muted'}>
               {description}
             </Typography>
             {/* button cta */}
-            <Button asChild variant={"secondary"}>
-              <Link to={"https://web.vottamean.com/auth/signup"}>
+            <Button asChild variant={'secondary'}>
+              <Link to={'https://web.vottamean.com/auth/signup'}>
                 Get Started
               </Link>
             </Button>
@@ -107,8 +113,8 @@ export const Card = ({
             >
               <img
                 src={url}
-                alt="image"
-                className="object-contain h-full w-full"
+                alt='image'
+                className='object-contain h-full w-full'
               />
             </motion.div>
           </div>
