@@ -82,7 +82,7 @@ export const benefits = [
       "https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format",
   },
   {
-    title: "Generate and Download Reports",
+    title: "Reliable Safety Concerns",
     id: "work",
     icon: <ChartPie size={24} />,
     description:
