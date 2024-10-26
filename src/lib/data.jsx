@@ -83,7 +83,8 @@ export const benefits = [
     description:
       "Say goodbye to the complexities of juggling multiple tools! Our platform centralizes attendance management with just simple steps of uses. This flexibility saves time and allows lectures to focus more on teaching and less on administrative tasks.",
     imageUrl:
-      "https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format",
+    "https://images.unsplash.com/photo-1713947504156-07e483f2246d?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      // "https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format",
   },
   {
     title: "Reliable Safety Concerns",
