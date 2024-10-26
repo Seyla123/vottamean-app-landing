@@ -1,0 +1,14 @@
+version: '3'
+services:
+  landing:
+    image: 'git.clp.kr:5050/anbschool/2nd/hexcode/team-projects/wavetrack-guest/landing:latest'
+    container_name: landing
+    restart: always
+    ports:
+      - '5174:80'
+    networks:
+      - shared-network
+
+networks:
+  shared-network:
+    driver: bridge

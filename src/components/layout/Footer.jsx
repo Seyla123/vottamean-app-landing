@@ -1,89 +1,89 @@
-import React from "react";
-import { Box, Container, Typography } from "@mui/material";
-import { footerData } from "../../data/footerData";
-import { Link } from "react-router-dom";
-
-const footer = {
-    marginTop: {
-        xs: "40px",
-        sm: "80px",
-    },
-    marginBottom: "20px",
-    marginLeft: "10px",
-    marginRight: "10px",
-};
-
-const footerContainer = {
-    display: "flex",
-    bgcolor: "#F3F3F5",
-    justifyContent: "space-between",
-    alignItems: "start",
-    paddingRight: {
-        xs: "14px",
-        sm: "80px",
-    },
-    paddingLeft: {
-        xs: "14px",
-        sm: "80px",
-    },
-    paddingTop: {
-        xs: "14px",
-        sm: "80px",
-    },
-    paddingBottom: {
-        xs: "40px",
-        sm: "120px",
-    },
-    borderRadius: "16px",
-    flexDirection: {
-        xs: "column",
-        sm: "row",
-    },
-    gap: {
-        xs: "48px",
-        sm: "0px",
-    },
-};
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+} from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Footer = () => {
-    return (
-        <Box sx={footer}>
-            <Container maxWidth="lg" disableGutters sx={footerContainer}>
-                <Box sx={{ maxWidth: "400px" }}>
-                    <img
-                        src={footerData.logo}
-                        alt="logo"
-                        style={{ width: "200px" }}
-                    />
-                    <Typography variant="body1" sx={{ mt: "16px" }}>
-                        {footerData.description}
-                    </Typography>
-                </Box>
-                <Box>
-                    <ul style={{ listStyle: "none", padding: 0 }}>
-                        {footerData.menuItems.map((menu, index) => (
-                            <li key={index}>
-                                <Link
-                                    to={menu.link}
-                                    style={{
-                                        textDecoration: "none",
-                                        color: "black",
-                                    }}
-                                >
-                                    <Typography
-                                        variant="body1"
-                                        sx={{ mt: "16px" }}
-                                    >
-                                        {menu.title}
-                                    </Typography>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                </Box>
-            </Container>
-        </Box>
-    );
+  return (
+    <footer className='text-muted mt-32 p-4'>
+      <div className='bg-black rounded-lg'>
+        <div className='innerWidth mx-auto px-4 py-12 '>
+          {/* Main Footer Content */}
+          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
+            {/* Company Info */}
+            <div className='space-y-4'>
+              <h3 className='text-xl font-bold text-white'>Vottamean</h3>
+              <p className='text-sm'>
+                Building better solutions for a connected world.
+              </p>
+              <div className='flex space-x-2'>
+                <Button
+                  variant='ghost'
+                  size='icon'
+                  className='hover:text-white hover:bg-gray-800'
+                >
+                  <Facebook className='w-5 h-5' />
+                </Button>
+                <Button
+                  variant='ghost'
+                  size='icon'
+                  className='hover:text-white hover:bg-gray-800'
+                >
+                  <Twitter className='w-5 h-5' />
+                </Button>
+                <Button
+                  variant='ghost'
+                  size='icon'
+                  className='hover:text-white hover:bg-gray-800'
+                >
+                  <Instagram className='w-5 h-5' />
+                </Button>
+                <Button
+                  variant='ghost'
+                  size='icon'
+                  className='hover:text-white hover:bg-gray-800'
+                >
+                  <Linkedin className='w-5 h-5' />
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className='border-t border-gray-800 mt-12 pt-8'>
+            <div className='flex flex-col md:flex-row justify-between items-center'>
+              <p className='text-sm'>
+                &copy; 2024 Vottamean. All rights reserved.
+              </p>
+              <div className='flex space-x-2 mt-4 md:mt-0'>
+                <Button
+                  variant='ghost'
+                  className='hover:text-white hover:bg-gray-800'
+                  asChild
+                >
+                  <Link to='/privacy'>Privacy Policy</Link>
+                </Button>
+                <Button
+                  variant='ghost'
+                  className='hover:text-white hover:bg-gray-800'
+                  asChild
+                >
+                  <Link to='/terms'>Terms of Service</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;

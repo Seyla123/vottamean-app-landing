@@ -1,15 +1,13 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
-import { ThemeProvider } from "@mui/material/styles";
-import theme from "./theme.js";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.jsx';
+import './index.css';
+import CustomProvider from './components/layout/CustomProvider.jsx';
 
-export default theme;
 createRoot(document.getElementById("root")).render(
-    <StrictMode>
-        <ThemeProvider theme={theme}>
-            <App />
-        </ThemeProvider>
-    </StrictMode>
+  <StrictMode>
+    <CustomProvider>
+      <App />
+    </CustomProvider>
+  </StrictMode>
 );

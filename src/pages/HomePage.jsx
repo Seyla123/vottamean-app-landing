@@ -1,25 +1,30 @@
-import React from "react";
-import HeroSection from "../components/section/HeroSection";
-import TrustedSection from "../components/section/TrustedSection";
-import OurFeatureSection from "../components/section/OurFeatureSection";
-import TestimonialSection from "../components/section/TestimonialSection";
-import PricingSection from "../components/section/PricingSection";
-import { Box } from "@mui/material";
-import FaqSection from "../components/section/FaqSection";
-import ContactSection from "../components/section/ContactSection";
+import React from 'react';
+import HeroSection from '../components/section/HeroSection';
+import HowDoesItWorkSection from '../components/section/HowDoesItWorkSection';
+import BenefitSection from '../components/section/BenefitSection';
+import StackingCard from '../components/common/StackingCard';
+import SavingSection from '../components/section/SavingSection';
+import TestiminialSection from '../components/section/TestiminialSection';
+import FAQSection from '../components/section/FAQSection';
+import StillGotQuestionSection from '@/components/section/StillGotQuestionSection';
+import ConclusionSection from '@/components/section/ConclusionSection';
+import PricingSection from '@/components/section/PricingSection';
 
-const HomePage = () => {
-    return (
-        <Box>
-            <HeroSection />
-            <TrustedSection />
-            <OurFeatureSection />
-            <TestimonialSection />
-            <PricingSection />
-            <FaqSection />
-            <ContactSection />
-        </Box>
-    );
-};
+function HomePage() {
+  return (
+    <div className='flex flex-col lg:gap-32 gap-16'>
+      <HeroSection id='hero' />
+      <HowDoesItWorkSection id='how-it-works' />
+      <BenefitSection id='benefits' />
+      <SavingSection id='saving' />
+      <TestiminialSection id='testimonials' />
+      <FAQSection id='faqs' />
+      <StillGotQuestionSection />
+      <PricingSection id='pricing' />
+      <StackingCard id={'features'} />
+      <ConclusionSection />
+    </div>
+  );
+}
 
 export default HomePage;
