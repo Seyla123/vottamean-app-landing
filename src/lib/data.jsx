@@ -15,6 +15,7 @@ import {
   HandCoins,
   GraduationCap,
   MailCheck,
+  MonitorSmartphone,
 } from 'lucide-react';
 
 import loginMac from '../assets/images/features/Macbook Pro.svg';
@@ -280,7 +281,7 @@ export const pricingPlans = [
         title: 'Full access to all features',
       },
       {
-        icon: <DoorClosed size={24} />,
+        icon: <MonitorSmartphone size={24} />,
         title: 'All devices supported',
       },
       {
@@ -308,7 +309,7 @@ export const pricingPlans = [
         title: 'Full access to all features',
       },
       {
-        icon: <DoorOpen size={24} />,
+        icon: <MonitorSmartphone size={24} />,
         title: 'All devices supported',
       },
       {
@@ -335,7 +336,7 @@ export const pricingPlans = [
         title: 'Full access to all features',
       },
       {
-        icon: <MailCheck size={24} />,
+        icon: <MonitorSmartphone size={24} />,
         title: 'All devices supported',
       },
       {
