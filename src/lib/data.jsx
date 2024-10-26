@@ -8,10 +8,14 @@ import {
   DoorOpen,
   Clock,
   Trophy,
+  Sparkles,
   BriefcaseBusiness,
   ChartPie,
   DoorClosed,
+  HandCoins,
   GraduationCap,
+  MailCheck,
+  MonitorSmartphone,
 } from 'lucide-react';
 
 import loginMac from '../assets/images/features/Macbook Pro.svg';
@@ -62,7 +66,7 @@ export const benefits = [
     description:
       "Our all-in-one attendance system simplifies the management of student data, progress tracking, and class scheduling. With real-time attendance tracking and integrated communication features, lectures can streamline operations and boost productivity.",
     imageUrl:
-      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     title: "Data Accuracy",
@@ -71,7 +75,8 @@ export const benefits = [
     description:
       "Designed for all levels of tech-savviness, our platform enables accurate, real-time data capture and secure storage. This integration not only reduces paperwork but also offers precise insights, enhancing overall efficiency and making daily operations smoother for lectures and administrators alike.",
     imageUrl:
-      'https://images.pexels.com/photos/8423049/pexels-photo-8423049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      'https://images.unsplash.com/photo-1711606815631-38d32cdaec3e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+
   },
   {
     title: "Efficient Time Saving",
@@ -80,7 +85,7 @@ export const benefits = [
     description:
       "Say goodbye to the complexities of juggling multiple tools! Our platform centralizes attendance management with just simple steps of uses. This flexibility saves time and allows lectures to focus more on teaching and less on administrative tasks.",
     imageUrl:
-      "https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format",
+    "https://images.unsplash.com/photo-1713947504156-07e483f2246d?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     title: "Reliable Safety Concerns",
@@ -89,7 +94,7 @@ export const benefits = [
     description:
     "Our web application prioritizes students safety by providing timely notifications to guardians about attendance. This transparency provide a better awareness which fosters trust for parents while supporting schools in creating a safer educational environment.",
     imageUrl:
-      "https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format",
+      "https://images.unsplash.com/photo-1665686374006-b8f04cf62d57?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
 ];
 
@@ -269,53 +274,53 @@ export const pricingPlans = [
       },
       {
         icon: <GraduationCap size={24} />,
-        title: 'Limited access to 40+ students',
+        title: 'Limited access to 50 students',
       },
       {
-        icon: <ChartPie size={24} />,
-        title: 'Limited file size to reports',
+        icon: <Sparkles size={24} />,
+        title: 'Full access to all features',
       },
       {
-        icon: <DoorClosed size={24} />,
-        title: 'Limited access to 4 classes',
+        icon: <MonitorSmartphone size={24} />,
+        title: 'All devices supported',
       },
       {
-        icon: <Clock size={24} />,
-        title: 'Limited priority email support',
+        icon: <MailCheck size={24} />,
+        title: 'Recieve Email supports',
       },
     ],
   },
   {
     title: 'Basic',
-    price: '$9',
+    price: '$3.99',
     duration: 'month',
     popular: true,
     features: [
       {
         icon: <BriefcaseBusiness size={24} />,
-        title: 'Access to 30 teachers account',
+        title: 'Access to 100 teachers account',
       },
       {
         icon: <GraduationCap size={24} />,
-        title: 'Access to 150+ students',
+        title: 'Access to 1000 students',
       },
       {
-        icon: <ChartPie size={24} />,
-        title: 'Increased file size limit for reports',
+        icon: <Sparkles size={24} />,
+        title: 'Full access to all features',
       },
       {
-        icon: <DoorOpen size={24} />,
-        title: 'Access to 10 classes',
+        icon: <MonitorSmartphone size={24} />,
+        title: 'All devices supported',
       },
       {
-        icon: <Clock size={24} />,
-        title: 'Priority email support',
+        icon: <MailCheck size={24} />,
+        title: 'Recieve Email supports',
       },
     ],
   },
   {
     title: 'Premium',
-    price: '$20',
+    price: '$9.99',
     duration: 'month',
     features: [
       {
@@ -324,19 +329,23 @@ export const pricingPlans = [
       },
       {
         icon: <GraduationCap size={24} />,
-        title: 'Unlimited access to students',
+        title: 'Unlimited students account',
       },
       {
-        icon: <ChartPie size={24} />,
-        title: 'Unlimited file size for reports',
+        icon: <Sparkles size={24} />,
+        title: 'Full access to all features',
       },
       {
-        icon: <DoorOpen size={24} />,
-        title: 'Unlimited access to classes',
+        icon: <MonitorSmartphone size={24} />,
+        title: 'All devices supported',
       },
       {
-        icon: <Trophy size={24} />,
-        title: 'Exclusive access to advanced analytics',
+        icon: <MailCheck size={24} />,
+        title: 'Recieve Email supports',
+      },
+      {
+        icon: <HandCoins size={24} />,
+        title: 'Super Saving',
       },
     ],
   },
