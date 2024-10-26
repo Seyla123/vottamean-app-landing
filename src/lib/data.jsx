@@ -93,7 +93,8 @@ export const benefits = [
     description:
     "Our web application prioritizes students safety by providing timely notifications to guardians about attendance. This transparency provide a better awareness which fosters trust for parents while supporting schools in creating a safer educational environment.",
     imageUrl:
-      "https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format",
+      // "https://images.unsplash.com/photo-1693581176773-a5f2362209e6?q=80&w=1200&auto=format",
+      "https://images.unsplash.com/photo-1665686374006-b8f04cf62d57?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
 ];
 
