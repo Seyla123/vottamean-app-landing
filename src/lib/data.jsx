@@ -11,6 +11,7 @@ import {
   BriefcaseBusiness,
   ChartPie,
   DoorClosed,
+  HandCoins,
   GraduationCap,
 } from 'lucide-react';
 
@@ -340,7 +341,7 @@ export const pricingPlans = [
         title: 'Recieve Email supports',
       },
       {
-        icon: <Trophy size={24} />,
+        icon: <HandCoins size={24} />,
         title: 'Super Saving',
       },
     ],
