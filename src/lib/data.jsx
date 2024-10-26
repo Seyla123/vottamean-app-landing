@@ -13,6 +13,7 @@ import {
   DoorClosed,
   HandCoins,
   GraduationCap,
+  MailCheck,
 } from 'lucide-react';
 
 import loginMac from '../assets/images/features/Macbook Pro.svg';
@@ -282,7 +283,7 @@ export const pricingPlans = [
         title: 'All devices supported',
       },
       {
-        icon: <Clock size={24} />,
+        icon: <MailCheck size={24} />,
         title: 'Recieve Email supports',
       },
     ],
@@ -310,7 +311,7 @@ export const pricingPlans = [
         title: 'All devices supported',
       },
       {
-        icon: <Clock size={24} />,
+        icon: <MailCheck size={24} />,
         title: 'Recieve Email supports',
       },
     ],
@@ -333,11 +334,11 @@ export const pricingPlans = [
         title: 'Full access to all features',
       },
       {
-        icon: <DoorOpen size={24} />,
+        icon: <MailCheck size={24} />,
         title: 'All devices supported',
       },
       {
-        icon: <Trophy size={24} />,
+        icon: <MailCheck size={24} />,
         title: 'Recieve Email supports',
       },
       {
