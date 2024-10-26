@@ -123,7 +123,7 @@ const Navbar = () => {
         </motion.div>
         <motion.div transition={{ duration: 0.2 }}>
           <Button asChild>
-            <Link to={'/'}>Get Started</Link>
+            <Link to={'https://web.vottamean.com/auth/signup'}>Get Started</Link>
           </Button>
         </motion.div>
       </motion.div>
@@ -230,7 +230,7 @@ const NavbarDropDown = ({ setIsMenuOpen }) => {
             <Link to={'/contact'}>Contact us</Link>
           </Button>
           <Button asChild className='w-full mt-4'>
-            <Link to={'/'}>Get Started</Link>
+            <Link to={'https://web.vottamean.com/auth/signup'}>Get Started</Link>
           </Button>
         </motion.div>
       </motion.li>
