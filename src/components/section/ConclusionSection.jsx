@@ -16,7 +16,7 @@ const ConclusionSection = () => {
             Just One Click to Mark Your Attendance
           </Typography>
           <Button asChild variant={'secondary'} className={'mt-8'}>
-            <Link to={'/'}>Get Started</Link>
+            <Link to={'https://web.vottamean.com/auth/signup'}>Get Started</Link>
           </Button>
         </div>
         <img
