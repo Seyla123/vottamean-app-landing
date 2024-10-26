@@ -270,19 +270,19 @@ export const pricingPlans = [
       },
       {
         icon: <GraduationCap size={24} />,
-        title: 'Limited access to 40+ students',
+        title: 'Limited access to 50 students',
       },
       {
         icon: <ChartPie size={24} />,
-        title: 'Limited file size to reports',
+        title: 'Full access to all features',
       },
       {
         icon: <DoorClosed size={24} />,
-        title: 'Limited access to 4 classes',
+        title: 'All devices supported',
       },
       {
         icon: <Clock size={24} />,
-        title: 'Limited priority email support',
+        title: 'Recieve Email supports',
       },
     ],
   },
