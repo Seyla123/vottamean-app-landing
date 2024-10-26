@@ -294,23 +294,23 @@ export const pricingPlans = [
     features: [
       {
         icon: <BriefcaseBusiness size={24} />,
-        title: 'Access to 30 teachers account',
+        title: 'Access to 100 teachers account',
       },
       {
         icon: <GraduationCap size={24} />,
-        title: 'Access to 150+ students',
+        title: 'Access to 1000 students',
       },
       {
         icon: <ChartPie size={24} />,
-        title: 'Increased file size limit for reports',
+        title: 'Full access to all features',
       },
       {
         icon: <DoorOpen size={24} />,
-        title: 'Access to 10 classes',
+        title: 'All devices supported',
       },
       {
         icon: <Clock size={24} />,
-        title: 'Priority email support',
+        title: 'Recieve Email supports',
       },
     ],
   },
