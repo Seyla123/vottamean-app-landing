@@ -72,7 +72,6 @@ export const benefits = [
     description:
       "Designed for all levels of tech-savviness, our platform enables accurate, real-time data capture and secure storage. This integration not only reduces paperwork but also offers precise insights, enhancing overall efficiency and making daily operations smoother for lectures and administrators alike.",
     imageUrl:
-      // 'https://images.pexels.com/photos/8423049/pexels-photo-8423049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       'https://images.unsplash.com/photo-1711606815631-38d32cdaec3e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 
   },
