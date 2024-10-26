@@ -288,7 +288,7 @@ export const pricingPlans = [
   },
   {
     title: 'Basic',
-    price: '$9',
+    price: '$3.99',
     duration: 'month',
     popular: true,
     features: [
