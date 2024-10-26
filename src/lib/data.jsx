@@ -316,7 +316,7 @@ export const pricingPlans = [
   },
   {
     title: 'Premium',
-    price: '$20',
+    price: '$9.99',
     duration: 'month',
     features: [
       {
