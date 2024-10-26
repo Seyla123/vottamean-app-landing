@@ -325,19 +325,23 @@ export const pricingPlans = [
       },
       {
         icon: <GraduationCap size={24} />,
-        title: 'Unlimited access to students',
+        title: 'Unlimited students account',
       },
       {
         icon: <ChartPie size={24} />,
-        title: 'Unlimited file size for reports',
+        title: 'Full access to all features',
       },
       {
         icon: <DoorOpen size={24} />,
-        title: 'Unlimited access to classes',
+        title: 'All devices supported',
       },
       {
         icon: <Trophy size={24} />,
-        title: 'Exclusive access to advanced analytics',
+        title: 'Recieve Email supports',
+      },
+      {
+        icon: <Trophy size={24} />,
+        title: 'Super Saving',
       },
     ],
   },
