@@ -8,6 +8,7 @@ import {
   DoorOpen,
   Clock,
   Trophy,
+  Sparkles,
   BriefcaseBusiness,
   ChartPie,
   DoorClosed,
@@ -275,7 +276,7 @@ export const pricingPlans = [
         title: 'Limited access to 50 students',
       },
       {
-        icon: <ChartPie size={24} />,
+        icon: <Sparkles size={24} />,
         title: 'Full access to all features',
       },
       {
@@ -303,7 +304,7 @@ export const pricingPlans = [
         title: 'Access to 1000 students',
       },
       {
-        icon: <ChartPie size={24} />,
+        icon: <Sparkles size={24} />,
         title: 'Full access to all features',
       },
       {
@@ -330,7 +331,7 @@ export const pricingPlans = [
         title: 'Unlimited students account',
       },
       {
-        icon: <ChartPie size={24} />,
+        icon: <Sparkles size={24} />,
         title: 'Full access to all features',
       },
       {
