@@ -1,4 +1,4 @@
-# Landing Page Project README
+# Landing Site Project
 
 **Convention Guide**: [Capstones Convention Guide](https://outgoing-oval-b13.notion.site/Capstones-Convention-Guide-f8214576f0da41758941a1678c8a6e07?pvs=4)
 
