@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import HeroSection from '../components/section/HeroSection';
 import HowDoesItWorkSection from '../components/section/HowDoesItWorkSection';
 import BenefitSection from '../components/section/BenefitSection';
@@ -11,6 +11,10 @@ import ConclusionSection from '@/components/section/ConclusionSection';
 import PricingSection from '@/components/section/PricingSection';
 
 function HomePage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='flex flex-col lg:gap-32 gap-16'>
       <HeroSection id='hero' />
