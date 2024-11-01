@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import vottameanLogo from '../../assets/icons/logo-v4.svg';
 import { useLocation } from 'react-router-dom';
+import { useMediaQuery } from '@/hooks/use-media-query';
 
 const navLinks = [
   { title: 'How it works', href: '#how-it-works' },
@@ -20,7 +21,7 @@ const Navbar = () => {
   const currentPath = location.pathname;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  console.log(currentPath);
+  const isDesktop = useMediaQuery('(max-width: 1280px)');
 
   const handleScroll = (e, href) => {
     e.preventDefault();
@@ -73,7 +74,11 @@ const Navbar = () => {
     >
       {/* LOGO */}
       <motion.div whileTap={{ scale: 0.98 }} transition={{ duration: 0.2 }}>
-        <Link to={'/'} className='flex items-center gap-2 cursor-pointer'>
+        <Link
+          to={'/'}
+          className='flex items-center gap-2 cursor-pointer'
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
           <img src={vottameanLogo} alt='logo' className='w-full size-8' />
         </Link>
       </motion.div>
@@ -111,14 +116,16 @@ const Navbar = () => {
       )}
 
       {/* NAVBAR DROPDOWN MENU */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <NavbarDropDown
-            currentPath={currentPath}
-            setIsMenuOpen={setIsMenuOpen}
-          />
-        )}
-      </AnimatePresence>
+      {isDesktop && (
+        <AnimatePresence>
+          {isMenuOpen && (
+            <NavbarDropDown
+              currentPath={currentPath}
+              setIsMenuOpen={setIsMenuOpen}
+            />
+          )}
+        </AnimatePresence>
+      )}
 
       {/* CTA */}
       <div className='xl:hidden block'>
