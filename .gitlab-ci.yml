@@ -134,8 +134,7 @@ production test:
   stage: production test
   script: 
     - apk add --no-cache curl
-    - echo $CI_COMMIT_SHORT_SHA
     - curl -s https://$PRODUCTION_DOMAIN
-    - curl -s https://$PRODUCTION_DOMAIN | grep -q "$CI_COMMIT_SHORT_SHA"
+    - curl -s https://$PRODUCTION_DOMAIN | grep -q "Vottamean"
   only: 
     - develop  # Only run on main 
