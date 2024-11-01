@@ -35,7 +35,7 @@ const PricingCard = ({ item }) => {
         </ul>
         {/* CARD BUTTON */}
         <Button className='mt-8' asChild>
-          <Link to={'https://web.vottamean.com/auth/signin'}>Start Now</Link>
+          <Link to={'https://hexcode.anbschool.org/app/auth/signup'}>Start Now</Link>
         </Button>
       </div>
       {item.popular && (
