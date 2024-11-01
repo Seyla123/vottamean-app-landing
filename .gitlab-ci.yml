@@ -2,7 +2,11 @@ image: node:20
 
 stages:
   - build
-  - deploy
+  - test
+  - deploy review
+  - deploy staging
+  - deploy production
+  - production test
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}
@@ -10,48 +14,128 @@ cache:
     - node_modules/
 
 variables:
+  STAGING_DOMAIN: linkfly-staging-seyla.surge.sh
   PRODUCTION_DOMAIN: hexcode.anbschool.org
   DEPLOY_USER: ubuntu
   DEPLOY_HOST: 13.212.6.189
-  SSH_EC2_PRIVATE_KEY: $SSH_EC2_PRIVATE_KEY
-  DIST_DEPLOY_PATH: /home/ubuntu/landing/dist/
+  SSH_EC2_PRIVATE_KEY: $SSH_EC2_PRIVATE_KEY  # Store your PEM key content as a CI/CD variable
+  DIST_DEPLOY_PATH : /home/ubuntu/landing/dist/
 
-build-landing:
+build website:
   stage: build
   script:
-    - echo $CI_COMMIT_SHORT_SHA
     - npm install
     - npm run build
-    - ls -la ./dist
+    - ls -la ./dist  # Verify dist directory contents
   artifacts:
     paths:
       - ./dist
   only:
+    - main
     - develop
+    - merge_requests  # Run on merge requests
 
-deploy-landing:
-  stage: deploy
+test artifacts:
+  stage: test
+  image: alpine
+  script:
+    - grep -q "Vottamean" ./dist/index.html
+  dependencies:
+    - build website
+  only:
+    - main
+    - develop
+    - merge_requests  # Run on merge requests
+
+test serve:
+  stage: test
+  script:
+    - npm install -g serve
+    - serve -s dist -l 3000 &
+    - sleep 3
+    - curl -s http://localhost:3000 | grep -q "Vottamean"
+  dependencies:
+    - build website
+  only:
+    - main
+    - develop
+    - merge_requests  # Run on merge requests
+
+deploy review:
+  stage: deploy review
+  environment:
+    name: review/$CI_COMMIT_REF_NAME
+    url: https://linkfly-$CI_ENVIRONMENT_SLUG.surge.sh
+    on_stop: stop review
+  script:
+    - npm install --global surge
+    - surge --project ./dist --domain linkfly-$CI_ENVIRONMENT_SLUG.surge.sh
+  dependencies:
+    - build website
+  only:
+    - merge_requests  # Only run on merge requests
+
+stop review:
+  stage: deploy review
+  only:
+    - merge_requests  # Only run on merge requests
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - echo "Remove review app"
+    - npm install --global surge
+    - surge teardown linkfly-$CI_ENVIRONMENT_SLUG.surge.sh
+  when: manual
+  environment:
+    name: review/$CI_COMMIT_REF_NAME
+    action: stop
+deploy staging:
+  stage: deploy staging
+  environment:
+    name: staging
+    url: https://$STAGING_DOMAIN
+  script:
+    - npm install --global surge
+    - surge --project ./dist --domain $STAGING_DOMAIN
+  only: 
+    - main  # Only run on main
+
+deploy production:
+  stage: deploy production
   environment:
     name: production
     url: https://$PRODUCTION_DOMAIN
   before_script:
-    - apt-get update -y && apt-get install -y openssh-client rsync
-    - eval $(ssh-agent -s)
-
-    - echo "$SSH_EC2_PRIVATE_KEY" | tr -d '\r' > private_key.pem
-    - chmod 400 private_key.pem
+    - apt-get update -y && apt-get install -y openssh-client rsync   # Ensure SSH client is available
+    - eval $(ssh-agent -s)  # Start SSH agent
+    - echo "$SSH_EC2_PRIVATE_KEY" | tr -d '\r' > private_key.pem  # Create key file
+    - chmod 400 private_key.pem  # Set the appropriate permissions for the key
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
-    - ssh-keyscan -H $DEPLOY_HOST >> ~/.ssh/known_hosts
+    - ssh-keyscan -H $DEPLOY_HOST >> ~/.ssh/known_hosts  # Trust the host key
 
   script:
     - echo "Deploying to EC2 staging..."
-    - rsync -avz -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -vvv" ./dist/ ubuntu@$DEPLOY_HOST:$DIST_DEPLOY_PATH
-    - ssh -i "private_key.pem" -o StrictHostKeyChecking=no -vvv ubuntu@$DEPLOY_HOST "
-      echo 'Deployment complete!' &&
+    - rsync -avz -e "ssh -i private_key.pem" ./dist/ ubuntu@$DEPLOY_HOST:$DIST_DEPLOY_PATH
+    - ssh -i "private_key.pem" ubuntu@$DEPLOY_HOST "
+      echo 'Deployment complete!' && 
       ls -l $DIST_DEPLOY_PATH &&
       sudo nginx -t &&
-      sudo systemctl restart nginx
+      sudo systemctl restart nginx &&
+      sudo systemctl status nginx
       "
-  only:
-    - develop
+    - if [ $? -eq 0 ]; then echo "SSH connection successful!"; else echo "SSH connection failed!"; fi
+  only: 
+    - develop 
+    - main
+
+production test:
+  image: alpine
+  stage: production test
+  script: 
+    - apk add --no-cache curl
+    - curl -s $PRODUCTION_DOMAIN
+    - curl -s $PRODUCTION_DOMAIN | grep -q "Vottamean"
+  only: 
+    - develop  # Only run on main
+    - main
