@@ -10,10 +10,10 @@ cache:
     - node_modules/
 
 variables:
-  PRODUCTION_DOMAIN: 13.212.6.189
+  PRODUCTION_DOMAIN: hexcode.anbschool.org
   DEPLOY_USER: ubuntu
   DEPLOY_HOST: 13.212.6.189
-  SSH_EC2_PRIVATE_KEY: $SSH_EC2_PRIVATE_KEY 
+  SSH_EC2_PRIVATE_KEY: $SSH_EC2_PRIVATE_KEY
   DIST_DEPLOY_PATH : /home/ubuntu/landing/dist/
 
 build:
