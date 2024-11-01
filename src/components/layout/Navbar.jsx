@@ -4,6 +4,7 @@ import { Squash as Hamburger } from 'hamburger-react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import vottameanLogo from '../../assets/icons/logo-v4.svg';
+import { useLocation } from 'react-router-dom';
 
 const navLinks = [
   { title: 'How it works', href: '#how-it-works' },
@@ -15,7 +16,11 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const location = useLocation();
+  const currentPath = location.pathname;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  console.log(currentPath);
 
   const handleScroll = (e, href) => {
     e.preventDefault();
@@ -74,36 +79,45 @@ const Navbar = () => {
       </motion.div>
 
       {/* NAV LINKS */}
-      <ul className='xl:flex flex-1 items-center ml-8 hidden'>
-        {navLinks.map((link, index) => (
-          <motion.li
-            key={index}
-            variants={linkVariants}
-            transition={{ duration: 0.2 }}
-          >
-            <Button
-              variant={'ghost'}
-              asChild
-              className='text-muted-foreground relative group'
-              onClick={e => handleScroll(e, link.href)}
-            >
-              <Link to={link.href}>
-                {link.title}
-                <motion.span
-                  className='absolute bottom-0 left-0 w-full h-0.5 bg-primary origin-left'
-                  initial={{ scaleX: 0 }}
-                  whileHover={{ scaleX: 1 }}
-                  transition={{ duration: 0.2 }}
-                />
-              </Link>
-            </Button>
-          </motion.li>
-        ))}
-      </ul>
+      {currentPath !== '/contact' && (
+        <>
+          <ul className='xl:flex flex-1 items-center ml-8 hidden'>
+            {navLinks.map((link, index) => (
+              <motion.li
+                key={index}
+                variants={linkVariants}
+                transition={{ duration: 0.2 }}
+              >
+                <Button
+                  variant={'ghost'}
+                  asChild
+                  className='text-muted-foreground relative group'
+                  onClick={e => handleScroll(e, link.href)}
+                >
+                  <Link to={link.href}>
+                    {link.title}
+                    <motion.span
+                      className='absolute bottom-0 left-0 w-full h-0.5 bg-primary origin-left'
+                      initial={{ scaleX: 0 }}
+                      whileHover={{ scaleX: 1 }}
+                      transition={{ duration: 0.2 }}
+                    />
+                  </Link>
+                </Button>
+              </motion.li>
+            ))}
+          </ul>
+        </>
+      )}
 
       {/* NAVBAR DROPDOWN MENU */}
       <AnimatePresence>
-        {isMenuOpen && <NavbarDropDown setIsMenuOpen={setIsMenuOpen} />}
+        {isMenuOpen && (
+          <NavbarDropDown
+            currentPath={currentPath}
+            setIsMenuOpen={setIsMenuOpen}
+          />
+        )}
       </AnimatePresence>
 
       {/* CTA */}
@@ -123,7 +137,9 @@ const Navbar = () => {
         </motion.div>
         <motion.div transition={{ duration: 0.2 }}>
           <Button asChild>
-            <Link to={'https://web.vottamean.com/auth/signup'}>Get Started</Link>
+            <Link to={'https://web.vottamean.com/auth/signup'}>
+              Get Started
+            </Link>
           </Button>
         </motion.div>
       </motion.div>
@@ -131,7 +147,7 @@ const Navbar = () => {
   );
 };
 
-const NavbarDropDown = ({ setIsMenuOpen }) => {
+const NavbarDropDown = ({ setIsMenuOpen, currentPath }) => {
   const handleScroll = (e, href) => {
     e.preventDefault();
     setIsMenuOpen(false);
@@ -189,31 +205,36 @@ const NavbarDropDown = ({ setIsMenuOpen }) => {
       exit='hidden'
       className='w-full h-fit bg-background inset-0 z-[99] flex flex-col space-y-2 fixed backdrop-blur-lg top-14 border-b py-10 px-4 items-center'
     >
-      {navLinks.map((link, index) => (
-        <motion.li
-          key={index}
-          variants={itemVariants}
-          transition={{ duration: 0.2 }}
-          className='w-full'
-        >
-          <Button
-            variant={'ghost'}
-            asChild
-            className='text-muted-foreground relative group w-full'
-            onClick={e => handleScroll(e, link.href)}
-          >
-            <Link to={link.href}>
-              {link.title}
-              <motion.span
-                className='absolute bottom-0 left-0 w-full h-0.5 bg-primary origin-center'
-                initial={{ scaleX: 0 }}
-                whileHover={{ scaleX: 1 }}
-                transition={{ duration: 0.2 }}
-              />
-            </Link>
-          </Button>
-        </motion.li>
-      ))}
+      {currentPath !== '/contact' && (
+        <>
+          {navLinks.map((link, index) => (
+            <motion.li
+              key={index}
+              variants={itemVariants}
+              transition={{ duration: 0.2 }}
+              className='w-full'
+            >
+              <Button
+                variant={'ghost'}
+                asChild
+                className='text-muted-foreground relative group w-full'
+                onClick={e => handleScroll(e, link.href)}
+              >
+                <Link to={link.href}>
+                  {link.title}
+                  <motion.span
+                    className='absolute bottom-0 left-0 w-full h-0.5 bg-primary origin-center'
+                    initial={{ scaleX: 0 }}
+                    whileHover={{ scaleX: 1 }}
+                    transition={{ duration: 0.2 }}
+                  />
+                </Link>
+              </Button>
+            </motion.li>
+          ))}
+        </>
+      )}
+
       <motion.li
         className='flex flex-col space-y-2 w-full'
         variants={itemVariants}
@@ -230,7 +251,9 @@ const NavbarDropDown = ({ setIsMenuOpen }) => {
             <Link to={'/contact'}>Contact us</Link>
           </Button>
           <Button asChild className='w-full mt-4'>
-            <Link to={'https://web.vottamean.com/auth/signup'}>Get Started</Link>
+            <Link to={'https://web.vottamean.com/auth/signup'}>
+              Get Started
+            </Link>
           </Button>
         </motion.div>
       </motion.li>
