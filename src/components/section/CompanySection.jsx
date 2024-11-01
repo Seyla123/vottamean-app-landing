@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 import logo1 from '@/assets/images/logo-1.png';
 import logo2 from '@/assets/images/logo-2.png';
 import logo3 from '@/assets/icons/ratifyme-logo.png';
-import logo4 from '@/assets/icons/agteach-logo.svg';
+// import logo4 from '@/assets/icons/agteach-logo.svg';
 
 const logos = [
   {
@@ -24,10 +24,10 @@ const logos = [
     name: 'Apple',
     img: logo2,
   },
-  {
-    name: 'AgTeach',
-    img: logo4,
-  },
+  // {
+  //   name: 'AgTeach',
+  //   img: logo4,
+  // },
   {
     name: 'Ratifyme',
     img: logo3,
