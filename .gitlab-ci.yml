@@ -12,10 +12,9 @@ cache:
 variables:
   PRODUCTION_DOMAIN: 13.212.6.189
   DEPLOY_USER: ubuntu
-  DEPLOY_HOST: 13.212.6.189
-  DEPLOY_PATH: /var/www/testing  
+  DEPLOY_HOST: 13.212.6.189 
   SSH_EC2_PRIVATE_KEY: $SSH_EC2_PRIVATE_KEY 
-  DIST_DEPLOY_PATH : /home/ubuntu/frontend/dist/
+  DIST_DEPLOY_PATH : /home/ubuntu/landing/dist/
 
 build:
   stage: build
@@ -38,20 +37,20 @@ deploy:
   before_script:
     - apt-get update -y && apt-get install -y openssh-client rsync   
     - eval $(ssh-agent -s)  
+    - mkdir -p ~/.ssh
     - echo "$SSH_EC2_PRIVATE_KEY" | tr -d '\r' > private_key.pem 
     - chmod 400 private_key.pem  
-    - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
     - ssh-keyscan -H $DEPLOY_HOST >> ~/.ssh/known_hosts 
 
   script:
     - echo "Deploying to EC2 staging..."
-    - rsync -avz -e "ssh -i private_key.pem" ./dist/ ubuntu@$DEPLOY_HOST:$DIST_DEPLOY_PATH
-    - ssh -i "private_key.pem" ubuntu@$DEPLOY_HOST"
+    - rsync -avz -e "ssh -i private_key.pem -o StrictHostKeyChecking=no -vvv" ./dist/ ubuntu@$DEPLOY_HOST:$DIST_DEPLOY_PATH
+    - ssh -i "private_key.pem" -o StrictHostKeyChecking=no -vvv ubuntu@$DEPLOY_HOST "
       echo 'Deployment complete!' &&
       ls -l $DIST_DEPLOY_PATH &&
       sudo nginx -t &&
-      sudo systemctl restart nginx &&
-      "
+      sudo systemctl restart nginx
+     "
   only: 
     - develop
