@@ -31,7 +31,7 @@ build:
     - develop
 
 deploy:
-  stage: deploy production
+  stage: deploy
   environment:
     name: production
     url: https://$PRODUCTION_DOMAIN
