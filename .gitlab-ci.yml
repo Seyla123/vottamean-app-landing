@@ -98,7 +98,8 @@ deploy staging:
     - npm install --global surge
     - surge --project ./dist --domain $STAGING_DOMAIN
   only: 
-    - main  # Only run on main
+    - main
+    - develop
 
 deploy production:
   stage: deploy production
