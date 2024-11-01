@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/button';
 
 const Footer = () => {
   return (
-    <footer className='text-muted mt-32 p-4'>
+    <footer className='text-muted md:mt-32 mt-16 p-4'>
       <div className='bg-black rounded-lg'>
         <div className='innerWidth mx-auto px-4 py-12 '>
           {/* Main Footer Content */}
@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div className='border-t border-gray-800 mt-12 pt-8'>
+          {/* <div className='border-t border-gray-800 mt-12 pt-8'>
             <div className='flex flex-col md:flex-row justify-between items-center'>
               <p className='text-sm'>
                 &copy; 2024 Vottamean. All rights reserved.
@@ -79,7 +79,7 @@ const Footer = () => {
                 </Button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
