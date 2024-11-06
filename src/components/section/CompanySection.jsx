@@ -4,6 +4,8 @@ import Marquee from '../ui/marguee';
 import { cn } from '@/lib/utils';
 import logo1 from '@/assets/images/logo-1.png';
 import logo2 from '@/assets/images/logo-2.png';
+import logo3 from '@/assets/icons/ratifyme-logo.png';
+import logo4 from '@/assets/icons/agteach-logo.png';
 
 const logos = [
   {
@@ -23,12 +25,12 @@ const logos = [
     img: logo2,
   },
   {
-    name: 'Microsoft',
-    img: logo1,
+    name: 'AgTeach',
+    img: logo4,
   },
   {
-    name: 'Apple',
-    img: logo2,
+    name: 'Ratifyme',
+    img: logo3,
   },
 ];
 
@@ -57,7 +59,7 @@ const Logo = ({ name, img }) => {
       <img
         src={img}
         alt={name}
-        className='w-full h-full object-cover rounded-lg'
+        className='w-full h-full object-contain rounded-lg'
       />
     </div>
   );

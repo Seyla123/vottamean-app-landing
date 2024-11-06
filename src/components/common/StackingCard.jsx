@@ -95,7 +95,7 @@ export const Card = ({
             </Typography>
             {/* button cta */}
             <Button asChild>
-              <Link to={'https://web.vottamean.com/auth/signup'}>Get Started</Link>
+              <Link to={'https://hexcode.anbschool.org/auth/signup'}>Get Started</Link>
             </Button>
           </div>
 

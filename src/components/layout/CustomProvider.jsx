@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import { BrowserRouter } from 'react-router-dom';
-import { ReactLenis, useLenis } from '@studio-freight/react-lenis';
+import { ReactLenis } from '@studio-freight/react-lenis';
 import { Provider } from 'react-redux';
 import store from '@/store/store';
 import Footer from './Footer';

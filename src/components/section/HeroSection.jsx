@@ -99,7 +99,7 @@ const HeroSection = ({ id }) => {
           {/* CTA */}
           <motion.div variants={itemVariants}>
             <Button asChild className='shadow-lg'>
-              <Link to='https://web.vottamean.com/auth/signup'>Get Started</Link>
+              <Link to='https://hexcode.anbschool.org/auth/signup'>Get Started</Link>
             </Button>
           </motion.div>
         </div>
