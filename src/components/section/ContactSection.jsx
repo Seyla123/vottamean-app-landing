@@ -9,17 +9,13 @@ import SectionHeader from '@/components/common/SectionHeader';
 import { Textarea } from '../ui/textarea';
 import FAQSection from './FAQSection';
 import { useSendEmailMutation } from '@/services/emailSupportApi';
-import { Toast } from '../ui/toast';
 
-export default function ContactSection() {
+export default function ContactSection({setShowSnackbar}) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
-
-  // State for controlling the visibility of the snackbar message
-  const [showSnackbar, setShowSnackbar] = useState(false);
 
   // Initialize the mutation hook
   const [sendEmail, { isLoading }] = useSendEmailMutation();
@@ -50,17 +46,10 @@ export default function ContactSection() {
 
   return (
     <section className=''>
+
       <SectionHeader subtitle={'Contact'} title={'Get in Touch'} />
-      <div className='innerWidth mx-auto space-y-4 md:space-y-8'>
+      <div className='innerWidth mx-auto space-y-4 md:space-y-8 '>
         {/* Snackbar for successful submission */}
-        {showSnackbar ? (
-          <div className='fixed top-20 left-1/2 transform -translate-x-1/2 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg z-101'>
-            Your message has been sent successfully! Our support team will reach
-            out to you shortly.
-          </div>
-        ) : (
-          ''
-        )}
 
         {/* Contact Info Cards */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
