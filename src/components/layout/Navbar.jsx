@@ -144,7 +144,7 @@ const Navbar = () => {
         </motion.div>
         <motion.div transition={{ duration: 0.2 }}>
           <Button asChild>
-            <Link to={'https://hexcode.anbschool.org/app/auth/signup'}>
+            <Link to={'https://hexcode.anbschool.org/auth/signup'}>
               Get Started
             </Link>
           </Button>
@@ -258,7 +258,7 @@ const NavbarDropDown = ({ setIsMenuOpen, currentPath }) => {
             <Link to={'/contact'}>Contact us</Link>
           </Button>
           <Button asChild className='w-full mt-4'>
-            <Link to={'https://hexcode.anbschool.org/app/auth/signup'}>
+            <Link to={'https://hexcode.anbschool.org/auth/signup'}>
               Get Started
             </Link>
           </Button>

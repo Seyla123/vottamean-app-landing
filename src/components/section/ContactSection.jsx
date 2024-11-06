@@ -73,7 +73,7 @@ export default function ContactSection() {
                 support.
               </Typography>
               <Typography variant={'p'} className={'mt-8'}>
-                vottamean@gmail.com
+                vottamean.app@gmail.com
               </Typography>
             </div>
           </div>

@@ -72,7 +72,7 @@ const ImageTabs = ({ tabs, className }) => {
             </TabItem>
           ))}
           <Button asChild className='md:mt-8'>
-            <Link to={'https://hexcode.anbschool.org/app/auth/signup'}>
+            <Link to={'https://hexcode.anbschool.org/auth/signup'}>
               Try it free
             </Link>
           </Button>
