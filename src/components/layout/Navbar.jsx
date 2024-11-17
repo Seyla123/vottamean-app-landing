@@ -9,7 +9,7 @@ import { useMediaQuery } from '@/hooks/use-media-query';
 
 const navLinks = [
   { title: 'How it works', href: '#how-it-works' },
-  { title: 'Benifits', href: '#benefits' },
+  { title: 'Benefits', href: '#benefits' },
   { title: 'Testimonials', href: '#testimonials' },
   { title: 'FAQs', href: '#faqs' },
   { title: 'Pricing', href: '#pricing' },
